@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20194_1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_10" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_10&#34;, T3911_10)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 定义约束</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>在圆柱孔中定义销钉约束。</li>
+            <li>为静定的约束模型使用三点约束规则。</li>
+            <li>为这些模型使用“惯性释放”(Inertia Relief) 功能作为替代项。</li>
+            <li>查看约束硬化效果及相关错误。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">本例中，您将为准静态折弯载荷为 1500 N 的“铝”倾斜杠杆调查约束和载荷的影响。载荷是由圆柱孔内部放置的有间隙的钢条引起的。您需要关注杠杆的刚度和强度。</p>
+         <p>可使用完整装配的非线性接触分析对孔周围的应力状态进行准确的分析，同时考虑到钢条的公差和刚度 (几何和材料)。由于这样做会花费大量的资源和时间，您可以学习不同的类似解决方案来约束和加载零件。您可以使用这些解决方案判断实际上是最好和较差的加载条件。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012542.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012623.gif"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Constraints</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png"> TILT_LEVER_CONSTRAINEFFECTS_SIM.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">请 Creo Parametric 用户打开 TILT_LEVER_CONSTRAINEFFECTS.PRT。</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 使用预定义的销钉约束定义销钉约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“约束”(Constraints) 组中，单击<b>“销钉约束”(Pin Constraint) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011863.gif">。将出现“销钉约束”(Pin Constraint) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 按住 CTRL 键并在模型上选择两个较大的孔，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000242812.gif', 'Enlarge', 'width=669, height=346,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000242812.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000242812.gif', 'Enlarge', 'width=669, height=346,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 确认轴向平移和旋转是否已设置为自由，如图所示。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">未在销钉约束中固定轴向平移，因为这样会使孔曲面上的材料由于泊松效应 (横向应变效应) 而无法轴向缩短或延伸。这样做会人为地硬化杠杆，尤其是在弯矩最大的中心孔处。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000242811.gif" width="186"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">7. 在“约束”(Constraints) 组中，单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">8. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">9. 在模型上选择 <b>PNT1</b>。
+                  </p>
+                  <p class="step_p1">10. 在“平移”(Translation) 部分，单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif">，用于 X 和 Y 平移。
+                  </p>
+                  <p class="step_p1">11. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">在静态分析中，Simulate 需要模型至少是静定的。模型也可以为冗余约束。为防止整个杠杆沿轴承孔轴滑动，会约束 WCS Z 方向上杠杆曲面上的一个任意点。由于未在 Z 方向上施加任何力，因此这样做不会引起奇点。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义承载载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中，单击<b>“承载”(Bearing) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011763.gif">。将出现“承载载荷”(Bearing Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在模型上，选择小孔的一半曲面。对话框中列出了两个曲面。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在“力”(Force) 部分的 Y 字段中键入 <b>–1500</b>。完成的对话框如图所示。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000242810.gif" width="259"></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 网格化模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“创建”(Create)</b>。请注意，已创建了大约 1500 个实体元素。
+                  </p>
+                  <p class="step_p1">4. 在所有对话框中单击<b>“关闭”(Close)</b>，当出现保存网格的提示时，单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>tilt_lever_pinconstrained</b>。
+                        </li>
+                        <li>选择在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中显示的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7.  默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择刚刚定义的分析，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">10. 仔细检查在汇总文件中显示的信息。请注意最关心的数量 (应力和变形) 的最大值。关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 创建结果窗口并检查结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 窗口中选择 <b>tilt_lever_pinconstrained</b>。
+                  </p>
+                  <p class="step_p1">2. 选择<b>“结果”(Results)</b><b> &gt; “显示默认结果窗口”(Show Default Result Windows)</b>。将出现三个默认结果窗口：
+                  </p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>von Mises 应力动画</li>
+                        <li>位移量级条纹</li>
+                        <li>主应力矢量</li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">3. 查看以下内容：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在动画演示的结果中观察杠杆的移动和变形。销钉约束的轴承孔可以旋转，但无法在约束的方向上变形，因为它们已变得无穷硬。</li>
+                        <li>在主应力矢量出图中，观察两个约束孔处的非现实主应力矢量。因为真实的轴承杆只能承载向前的压力，所以不可能存在垂直于孔曲面的拉伸应力。在外部的大轴承孔中，会观察到垂直于孔曲面的矢量不指向下方，而是定向为朝向左侧。原因是：理想化的销钉约束还在 WCS-X
+                           方向上 (而不仅在 Y 方向上) 将通杆固定到孔内。
+                        </li>
+                        <li>因此，约束附近的应力可能会不准确。</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b> 返回至 Creo Simulate。在“消息”(Message) 对话框中单击<b>“否”(No)</b>。
+                  </p>
+                  <p class="step_p1">5. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“文件”(File)</b><b> &gt; “管理会话”(Manage Session)</b><b> &gt; “拭除当前”(Erase Current)</b> 以关闭显示的窗口，并从内存中拭除模型。
+                  </p>
+                  <p class="step_p1">7. 出现拭除确认提示时，单击<b>“是”(Yes)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 打开模型以开始三点约束建模方法。
+               </h4>
+               <div class="exe_st_grp1">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">第二种分析方法使用三点约束方法。应用三点约束的规则如下：
+                                 <ul>
+                                    <li>这些点可位于模型曲面上的任何位置，但不允许共线。</li>
+                                    <li>将第一个点固定在所有平移方向上。</li>
+                                    <li>将第二个点固定在相对于穿过点 1 和点 2 的轴的两个正交方向上。</li>
+                                    <li>将第三个点垂直于穿过所有点的曲面固定。</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">1. 打开文件 TILT_LEVER_CONSTRAINEFFECTS_SIM.PRT。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 7.</b> 定义三点约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在模型上定位点 <b>PNT0</b>、<b>PNT1</b> 和 <b>PNT2</b>，如图所示。请注意，这些点不共线。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000242809.gif" width="270"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">2. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">3. 在“约束”(Constraints) 组中，单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">4. 在“集的成员”(Member of Set) 部分中，单击<b>“新建”(New)</b>。将出现“约束集定义”(Constraint Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">5. 在“名称”(Name) 字段中输入 <b>3point</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b> 返回到“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">7. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">8. 在模型上选择 <b>PNT2</b>。
+                  </p>
+                  <p class="step_p1">9. 在“平移”(Translation) 部分中，单击<b>“固定”(Fixed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011797.gif"> 用于 X、Y 和 Z 平移。这是固定在所有平移方向上的第一个点。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">12. 在“约束”(Constraints) 组中，单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">13. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">14. 在模型上，选择 <b>PNT0</b>。
+                  </p>
+                  <p class="step_p1">15. 在“平移”(Translation) 部分，针对 X 平移单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif">。确认 Y 和 Z 平移已固定。这是固定在相对于穿过点 1 和点 2 的轴的两个正交方向上的第二个点。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">17. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">18. 在“约束”(Constraints) 组中，单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">19. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">20. 在模型上选择 <b>PNT1</b>。
+                  </p>
+                  <p class="step_p1">21. 在“平移”(Translation) 部分，单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif">，用于 X 和 Y 平移。确认 Z 平移已固定。这是垂直于穿过所有点的曲面固定的第三个点。
+                  </p>
+                  <p class="step_p1">22. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 8.</b> 定义承载载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中，单击<b>“承载”(Bearing) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011763.gif">。将出现“承载载荷”(Bearing Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在“集的成员”(Member of Set) 部分中，单击<b>“新建”(New)</b>。将出现“载荷集定义”(Load Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 在“名称”(Name) 字段中键入 <b>force_equilibrium</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“承载载荷”(Bearing Load) 对话框。
+                  </p>
+                  <p class="step_p1">6. 在模型上，选择小孔的一半曲面。对话框中列出了两个曲面。</p>
+                  <p class="step_p1">7. 在“力”(Force) 部分的 Y 字段中键入 <b>–1500</b>。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">10. 在“载荷”(Loads) 组中，单击<b>“承载”(Bearing) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011763.gif">。将出现“承载载荷”(Bearing Load) 对话框。
+                  </p>
+                  <p class="step_p1">11. 在模型树上，选择中间孔的一半曲面。对话框中列出了两个曲面。</p>
+                  <p class="step_p1">12. 在“力”(Force) 部分的 Y 字段中键入 <b>3152.81</b>。
+                  </p>
+                  <p class="step_p1">13. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">15. 在“载荷”(Loads) 组中，单击<b>“承载”(Bearing) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011763.gif">。将出现“承载载荷”(Bearing Load) 对话框。
+                  </p>
+                  <p class="step_p1">16. 在模型上，选择剩余的第三个孔的一半曲面。对话框中列出了两个曲面。</p>
+                  <p class="step_p1">17. 在“力”(Force) 部分的 Y 字段中键入 <b>-1652.81</b>。
+                  </p>
+                  <p class="step_p1">18. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">19. 要查看模型中合成载荷，请单击“载荷”(Loads) 组下拉菜单并选择<b>“查看总载荷”(Review Total Load)</b>。将出现“合成载荷”(Load Resultant) 对话框。
+                  </p>
+                  <p class="step_p1">20. 在“载荷”(Loads) 部分，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif">。
+                  </p>
+                  <p class="step_p1">21. 在模型树中，展开“载荷/约束”和“载荷集”force_equilibrium。选择 <b>Load1</b>、<b>Load2</b> 和 <b>Load3</b>。
+                  </p>
+                  <p class="step_p1">22. 在“选择”(Select) 对话框中，单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">23. 在“合成载荷”(Load Resultant) 对话框中，单击<b>“计算合成载荷”(Compute Load Resultant)</b>。
+                  </p>
+                  <p class="step_p1">24. 请注意，所有“合成载荷”值都近似为零。这确认了平衡承载载荷的正确值，并确认了模型处于平衡状态。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 9.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 使用定义的三点约束定义第一个静态分析。单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>tilt_lever_3point</b>。
+                        </li>
+                        <li>在“约束集/元件”(Constraint Set/Component) 部分选择 <b>3point/TILT_LEVER_CONSTRAINEFFECTS_SIM</b>。如有需要，请取消选择任何其他约束集。
+                        </li>
+                        <li>在“载荷集/元件”(Load Set/Component) 部分选择 <b>force_equilibrium/TILT_LEVER_CONSTRAINEFFECTS_SIM</b>。如有需要，请取消选择任何其他载荷集。
+                        </li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7.  默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择刚刚定义的分析，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">10. 仔细检查在汇总文件中显示的信息。请注意最关心的数量 (应力和变形) 的最大值。另请注意，合成载荷为零。关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，使用惯性释放定义第二个静态分析。单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+                  <p class="step_p1">12. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name)字段中键入 <b>tilt_lever_inertiarelief</b>。
+                        </li>
+                        <li>选择<b>“惯性释放”(Inertia Relief)</b>。请注意，约束集在“约束”(Constraints) 部分处于灰显状态。
+                        </li>
+                        <li>在“载荷集/元件”(Load Set/Component) 部分选择 <b>force_equilibrium/TILT_LEVER_CONSTRAINEFFECTS_SIM</b>。如有需要，请取消选择任何其他载荷集。
+                        </li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">13. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">15.  默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">16. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择刚刚定义的分析，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">17. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">18. 仔细检查在汇总文件中显示的信息。请注意最关心的数量 (应力和变形) 的最大值，以及合成载荷。关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 10.</b> 创建结果窗口并检查结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 使用以下输出文件夹创建三个显示 von Mises 应力的结果窗口：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>tilt_lever_pinconstrained</li>
+                        <li>tilt_lever_3point</li>
+                        <li>tilt_lever_inertiarelief</li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">2. 查看以下内容：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>请注意，通过约束产生的硬化效果已消失；您还会观察到，中心轴承孔周围的应力明显提高 (+50%)。完整的承载载荷会转移到上方的轴承孔半圆柱。将这些结果与使用销钉约束时的结果相比较。</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 使用以下输出文件夹再创建三个显示主应力矢量的结果窗口：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>tilt_lever_pinconstrained</li>
+                        <li>tilt_lever_3point</li>
+                        <li>tilt_lever_inertiarelief</li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">4. 查看以下内容：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>三点约束与惯性释放的应力结果相同。</li>
+                        <li>对于在力平衡中分析的模型，主应力矢量看上去更为合理，尤其在中心孔中。</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 使用以下输出文件夹再创建三个显示位移量级的结果窗口：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>tilt_lever_pinconstrained</li>
+                        <li>tilt_lever_3point</li>
+                        <li>tilt_lever_inertiarelief</li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">6. 比较它们之间的差异。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 请注意这些方法的优缺点：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>柱坐标系/销钉约束
+                           <ul>
+                              <li>创建过程简单快捷，尤其是销钉约束。适合于冗余约束结构，这种结构在不考虑结构性刚度的情况下无法手动分析外力。</li>
+                              <li>约束附近的结果不准确。约束的方向变得无穷硬。</li>
+                           </ul>
+                        </li>
+                        <li>三点
+                           <ul>
+                              <li>通过报告文件中的合成载荷可以检查力平衡是否正确。</li>
+                              <li>此外，即使在力平衡正确的情况下，通过点约束的“热点”检查也可以进一步检查自由力矩。</li>
+                              <li>位移已定义“零”点。</li>
+                              <li>定义点约束的操作冗长乏味。</li>
+                           </ul>
+                        </li>
+                        <li>惯性释放
+                           <ul>
+                              <li>创建过程简单快捷 (无必需的约束定义)。</li>
+                              <li>只能检查力平衡。自由力矩难以控制，因为未出现任何“热点”(没有约束能够防止零件变形出现用旋转加速度平衡的自由力矩)。</li>
+                              <li>位移未定义“零”点。</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b> 返回至 Creo Simulate。在“消息”(Message) 对话框中单击<b>“否”(No)</b>。
+                  </p>
+                  <p class="step_p1">9. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“文件”(File)</b><b> &gt; “管理会话”(Manage Session)</b><b> &gt; “拭除当前”(Erase Current)</b> 以关闭显示的窗口，并从内存中拭除模型。
+                  </p>
+                  <p class="step_p1">11. 出现拭除确认提示时，单击<b>“是”(Yes)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_10" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_10&#34;, T3911_10)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

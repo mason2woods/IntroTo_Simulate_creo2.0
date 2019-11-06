@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid21032_Understanding2DAxialSymmetry1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_26" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_26&#34;, T3911_26)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 了解对称度 - 循环对称</h2><br><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Symmetry</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png"> FLYWHEEL_3DSEGMENT_SIMULATE.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 FLYWHEEL_3DSEGMENT.PRT</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义 2D 轴对称模型的材料。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“材料”(Material) 组中单击<b>“材料”(Materials) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011841.gif">。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从材料列表中选择 <b>steel.mtl</b>，然后单击<b>“添加材料”(Add Material) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011739.gif">。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">5. 在“材料”(Material) 组中单击<b>“材料分配”(Material Assignment) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011840.gif">。将出现“材料分配”(Material Assignment) 对话框。
+                  </p>
+                  <p class="step_p1">6. 校验<b>“零件:FLYWHEEL_3DSEGMENT”(Part:FLYWHEEL_3DSEGMENT)</b> 已在“参考”(References) 部分列出，并且 <b>STEEL</b> 作为材料在“属性”(Properties) 部分列出。
+                  </p>
+                  <p class="step_p1">7. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义循环对称和位移约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 单击“约束”(Constraints) 组下拉菜单，然后选择<b>“对称”(Symmetry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011963.gif">。将出现“对称约束”(Symmetry Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“类型”(Type) 下拉菜单中选择<b>“循环”(Cyclic)</b>。
+                  </p>
+                  <p class="step_p1">4. 在第一个“参考”(References) 字段中单击，并选择显示在模型上的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000174241.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000174241.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000174241.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在第二个“参考”(References) 字段中单击，并选择在模型上显示的曲面。</p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000174240.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000174240.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000174240.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">9. 在模型中，选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000174239.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000174239.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000174239.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">10. 在“坐标系”(Coordinate System) 部分中，选择<b>“选定”(Selected)</b>。
+                  </p>
+                  <p class="step_p1">11. 在模型树中，展开“模拟特征”，然后单击 <b>CS0</b>。
+                  </p>
+                  <p class="step_p1">12. 在“约束”(Constraint) 对话框的“R 平移”(R Translation) 字段中单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif">。
+                  </p>
+                  <p class="step_p1">13. 在“Theta 平移”(Theta Translation) 和“Z 平移”(Z Translation) 字段中单击<b>“固定”(Fixed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011797.gif">。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">这些约束使顶部曲面能够沿径向展开，但是不能沿着 CSO 参考的 Z 轴扭转或变形。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">14. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义 2D 轴对称模型的载荷集。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“离心”(Centrifugal) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011760.gif">。“离心载荷”(Centrifugal Load) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“新建”(New)</b>。将出现“载荷集定义”(Load Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 在“名称”(Name) 字段中键入 <b>RPM20000</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回“离心载荷”(Centrifugal Load) 对话框。
+                  </p>
+                  <p class="step_p1">6. 在“角速度”(Angular Velocity) 部分的 Y 字段中键入 <b>20000</b>。
+                  </p>
+                  <p class="step_p1">7. 从“角速度”(Angular Velocity) 部分下拉菜单中选择 <b>RPM</b>。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">已经为值为 10,000 rad/sec<sup>2</sup> 的角加速度定义了第二个载荷集。
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义 AutoGEM 控制。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从 AutoGEM 组中的“AutoGEM 控制”(AutoGEM Control) 下拉菜单中单击<b>“最大元素尺寸”(Maximum Element Size) </b><img alt="Graphic" src="graphics/en_zh-cn_0000155110.gif">。将出现“最大元素尺寸控制”(Maximum Element Size Control) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在“参考”(References) 部分中，从下拉菜单中选择<b>“分量”(Components)</b>。
+                  </p>
+                  <p class="step_p1">4. 在“元素尺寸”(Element Size) 字段中键入 <b>30</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">已经为关键区域中的某些弯曲曲面定义了另一个 AutoGEM 控制。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>flywheel_3Dsegment</b>。
+                        </li>
+                        <li>选择在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中显示的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                        <li>单击<b>“高级控制”(Advanced Control)</b>。“高级 SPA 收敛控制”(Advanced SPA Convergence Control) 对话框随即出现。完成以下步骤：
+                           <ul>
+                              <li>选择<b>“使用高级控制”(Use Advanced Controls)</b>。
+                              </li>
+                              <li>在“最大应力误差目标”(Maximum Stress Error Target) 字段中键入 <b>1</b>。
+                              </li>
+                              <li>在“局部应力误差目标”(Local Stress Error Target) 字段中键入 <b>10</b>。
+                              </li>
+                              <li>不要为“局部应力误差”(Local Stress Error) 字段选择任何参考。</li>
+                           </ul>
+                        </li>
+                        <li>在“高级 SPA 收敛控制”(Advanced SPA Convergence Control) 对话框中，单击<b>“确定”(OK)</b> 以返回至“静态分析定义”(Static Analysis Definition) 对话框。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>flywheel_3Dsegment</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">10. 关闭所有对话框并返回到 Creo Simulate 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_26" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_26&#34;, T3911_26)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

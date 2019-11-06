@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20636_UnderstandingLargeDisplacementAnaly1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_18" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_18&#34;, T3911_18)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 了解大变形分析</h2><br><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Analysis\UnderstandLDA</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">VESSEL_SIMULATE.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 VESSEL.PRT</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 向模型分配材料属性。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“材料”(Material) 组中单击<b>“材料”(Materials) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011841.gif">。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从材料列表中选择 <b>pvc.mtl</b>，然后单击<b>“添加材料”(Add Material) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011739.gif">。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">5. 在“材料”(Material) 组中单击<b>“材料分配”(Material Assignment) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011840.gif">。将出现“材料分配”(Material Assignment) 对话框。
+                  </p>
+                  <p class="step_p1">6. 校验<b>“零件:VESSEL”(Part:VESSEL)</b> 已在“参考”(References) 部分列出，并且 <b>PVC</b> 作为材料在“属性”(Properties) 部分列出。
+                  </p>
+                  <p class="step_p1">7. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 调查在模型中定义的载荷和约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在模型树中，展开<b>“载荷/约束”(Loads/Constraints)</b>。
+                  </p>
+                  <p class="step_p1">2. 展开<b>约束集 ConstraintSet1</b>。请注意，在这个集中有两个约束。
+                  </p>
+                  <p class="step_p1">3. 选择每个约束并注意在模型中突出显示的特征。在这种情况下，我们将为了对称目的而切割几何。约束 3 正在模拟缺少的几何。位于容器顶部的 Constraint5 将模拟真实的约束。</p>
+                  <p class="step_p1">4. 在模型树中，展开<b>载荷集 LoadSet1</b>。
+                  </p>
+                  <p class="step_p1">5. 右键单击 <b>Load1</b>，然后选择<b>“编辑定义”(Edit Definition)</b>。“压力载荷”(Pressure Load) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">6. 请注意，已将 1.0 MPa 值分配给在模型中显示为绿色的曲面。</p>
+                  <p class="step_p1">7. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义 AutoGEM 控制用于网格细化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在 AutoGEM 组的“控制”(Control) 类型下拉菜单中单击<b>“最大元素尺寸”(Maximum Element Size) </b><img alt="Graphic" src="graphics/en_zh-cn_0000155110.gif">，然后单击<b>“薄实体”(Thin Solid)</b><b> &gt; “检测薄实体”(Detect Thin Solids)</b>。“自动检测薄实体”(Auto Detect Thin Solids) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 校验<b>“使用几何分析”(Use Geometry Analysis)</b> 已被选中。
+                  </p>
+                  <p class="step_p1">4. 在“特征厚度”(Characteristic Thickness) 字段中键入 <b>3.0</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“开始”(Start)</b>。
+                  </p>
+                  <p class="step_p1">6. 在模型树中，展开<b>“AutoGEM 控制”(AutoGEM Controls)</b>。校验十个控制均已列出。
+                  </p>
+                  <p class="step_p1">7. 从 AutoGEM 组中的<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif"> 下拉菜单中单击<b>“设置”(Settings)</b>。“AutoGEM 设置”(AutoGEM Settings) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">8. 选择<b>“设置”(Settings)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">9. 在“元素类型”(Element Types) 部分中，从“实体”(Solids) 下拉列表中选择<b>“砖，楔，四面体”(Brick, Wedge, Tetra)</b>。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">12. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">13. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。
+                  </p>
+                  <p class="step_p1">14. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">15. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">16. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000163465.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000163465.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000163465.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 为模型定义和运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Vessel_SDA</b>。
+                        </li>
+                        <li>选择显示在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中的约束集和载荷集。</li>
+                        <li>选择<b>“收敛”(Convergence)</b> 选项卡。将默认的<b>“单通道自适应”(Single-Pass Adaptive)</b> 方法保持为选定状态。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">6. 选择 <b>Vessel_SDA</b>，然后单击<b>“复制”(Copy) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011785.gif">。已列出新的分析，标题为 Copy_of_Vessel_SDA。
+                  </p>
+                  <p class="step_p1">7. 选择已复制的分析并单击<b>“编辑”(Edit)</b><b> &gt; “分析/研究”(Analysis/Study)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Vessel_LDA</b>。
+                        </li>
+                        <li>选中<b>“非线性/使用载荷历史”(Nonlinear/Use Load Histories)</b>。
+                        </li>
+                        <li>在“非线性选项”(Nonlinear Options) 部分，选中<b>“计算大变形”(Calculate Large Deformations)</b>。
+                        </li>
+                        <li>选择<b>“输出”(Output)</b> 选项卡。在“绘制栅格”(Plotting Grid) 字段中键入 <b>8</b>。
+                        </li>
+                        <li>从“输出步长”(Output Steps) 下拉列表中选择<b>“用户定义的输出步长”(User-defined Output Steps)</b>。
+                        </li>
+                        <li>在“主步长数”(Number of Master Steps) 字段中键入 <b>8</b>。
+                        </li>
+                        <li>单击<b>“用户定义的步长”(User-defined Steps)</b>，然后完成字段，如图所示。手动将间隔距离定为 <b>0、0.05、0.1、0.2、0.4、0.6、0.8 和 1.0</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">9. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000163464.gif', 'Enlarge', 'width=416, height=339,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000163464.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000163464.gif', 'Enlarge', 'width=416, height=339,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">10. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">11. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>Vessel_SDA</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">13. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">在汇总报告中，检查最大变形和 von Mises 应力。记录这些值。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">14. 关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 选择 <b>Vessel_LDA</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">16. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">在研究汇总报告中，检查最大变形和 von Mises 应力。记录这些值。将值和 SDA 研究做比较。
+                                 <ul>
+                                    <li>请注意，这些数量中的每一个的大小都各不相同。</li>
+                                    <li>请注意，Creo Simulate 在 Vessel_LDA 研究的实例中计算了不同的合成载荷。</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">17. 关闭所有对话框并返回到 Creo Simulate 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_18" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_18&#34;, T3911_18)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20835_TreatingSingularities1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_22" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_22&#34;, T3911_22)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 处理奇点</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>定义排除 AutoGEM 控制的隔离 (IEAC)。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在第一个研究中，定义了 AutoGEM 工具的排除 AutoGEM 控制的隔离 (IEAC) 特征。这使您能够使用奇点位置隔离来控制解的质量。在第二个研究中，可从载荷以及几何使用改进的模拟模型。在此情况下，通过将其与原始模型进行比较可标识新载荷和约束条件。此新方法用来显示仅访问
+            IEAC 工具不会自动修复解：Creo Simulate 解。
+         </p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\IEAC</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">FRICTION_GEAR_SHAFT_S1_SIMULATE.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 FRICTION_GEAR_SHAFT_S1.PRT。</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义 IEAC。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在 AutoGEM 组中从“控制”(Controls) 下拉菜单中选择<b>“排除的隔离”(Isolate for Exclusion) </b><img alt="Graphic" src="graphics/en_zh-cn_0000174234.gif">。“排除控制的隔离”(Isolate for Exclusion Control) 对话框随即显示。
+                  </p>
+                  <p class="step_p1">3. 在模型树中，展开“模拟特征”(Simulation Features)，然后选择 <b>PNT0</b>。完成以下字段：
+                  </p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>从“实体的隔离”(Isolation for Solids) 下拉菜单中选择<b>“最大元素尺寸”(Maximum Element Size)</b>。
+                        </li>
+                        <li>在“最大元素尺寸”(Maximum Element Size) 字段中键入 <b>30</b>。
+                        </li>
+                        <li>选择<b>“排除”(Exclude)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">4. 在“排除控制的隔离”(Isolate for Exclusion Control) 对话框中，单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">6. 在 AutoGEM 组中从“控制”(Controls) 下拉菜单中选择<b>“排除的隔离”(Isolate for Exclusion) </b><img alt="Graphic" src="graphics/en_zh-cn_0000174234.gif">。“排除控制的隔离”(Isolate for Exclusion Control) 对话框随即显示。
+                  </p>
+                  <p class="step_p1">7. 按下 CTRL 键并选择两条曲线用作载荷施加的参考，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000169440.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000169440.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000169440.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 从“实体的隔离”(Isolation for Solids) 下拉菜单中选择<b>“最大元素尺寸”(Maximum Element Size)</b>。
+                  </p>
+                  <p class="step_p1">9. 在“最大元素尺寸”(Maximum Element Size) 字段中键入 <b>30</b>。
+                  </p>
+                  <p class="step_p1">10. 选择<b>“排除”(Exclude)</b>。
+                  </p>
+                  <p class="step_p1">11. 在“排除控制的隔离”(Isolate for Exclusion Control) 对话框中，单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">13. 在 AutoGEM 组中从“控制”(Controls) 下拉菜单中选择<b>“排除的隔离”(Isolate for Exclusion) </b><img alt="Graphic" src="graphics/en_zh-cn_0000174234.gif">。“排除控制的隔离”(Isolate for Exclusion Control) 对话框随即显示。
+                  </p>
+                  <p class="step_p1">14. 按下 CTRL 键并选择轮廓中更改处模型上的边，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000169439.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000169439.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000169439.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 从“实体的隔离”(Isolation for Solids) 下拉菜单中选择<b>“最大元素尺寸”(Maximum Element Size)</b>。
+                  </p>
+                  <p class="step_p1">16. 在“最大元素尺寸”(Maximum Element Size) 字段中键入 <b>20</b>。
+                  </p>
+                  <p class="step_p1">17. 选择<b>“排除”(Exclude)</b>。
+                  </p>
+                  <p class="step_p1">18. 在“排除控制的隔离”(Isolate for Exclusion Control) 对话框中，单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 为模型定义和运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>friction_gear_MPA_excl</b>。
+                        </li>
+                        <li>选择显示在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中选择<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“收敛百分比”(Percent Convergence) 字段中键入 <b>8</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b>。
+                        </li>
+                        <li>校验<b>“局部位移、局部应变能和全局 RMS 应力”(Local Displacement， Local Strain Energy and Global RMS Stress)</b> 已被选中。<br>单击<b>“排除的元素”(Excluded Elements)</b> 选项卡并选择<b>“排除元素”(Exclude Elements)</b>。
+                        </li>
+                        <li>在“忽略”(Ignore) 部分中，选择<b>“应力和位移”(Stresses and Displacements)</b>。
+                        </li>
+                        <li>在“限制”(Limit) 部分中，选择<b>“多项式阶”(Polynomial Order)</b>，然后在关联的字段中键入 <b>2</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>friction_gear_MPA_excl</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">在汇总报告中，请注意满足收敛。这可能是因为 IEAC 控制被添加到模型中。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">10. 关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 打开并使用改进的模拟模型以消除静态分析中的应力奇点。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 打开 Creo Simulate 零件文件 FRICTION_GEAR_SHAFT_S2_SIMULATE.PRT。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">请注意，已经更改载荷的参考并将其定义到曲面，而非曲线。使用“弹簧”和“受力连接”元素定义约束。两种新方法均可消除应力奇点。因此，不再需要 IEAC 控制。同时提高结果的质量。此外，将圆角添加到模型中可减小先前发现有问题的位置上的高应力。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">2. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">3. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+                  <p class="step_p1">5. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中，键入 <b>friction_gear_MPA_IMP</b>。
+                        </li>
+                        <li>选择显示在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中选择<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“收敛百分比”(Percent Convergence) 字段中键入 <b>8</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b>。
+                        </li>
+                        <li>校验<b>“局部位移、局部应变能和全局 RMS 应力”(Local Displacement， Local Strain Energy and Global RMS Stress)</b> 已被选中。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">8. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>friction_gear_MPA_IMP</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">10. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">在汇总报告中，请注意现在解完全收敛而不必排除任何元素。同时，请注意大部分输出的值是不同的。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">11. 关闭所有对话框并返回到 Creo Simulate 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_22" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_22&#34;, T3911_22)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

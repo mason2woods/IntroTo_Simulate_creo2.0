@@ -1,0 +1,188 @@
+/* All rights are reserved */
+/* Copyright PTC Software (India) Pvt. Ltd */
+/* Created: Mahesh Lohokare */
+/* Updated: 05/14/2009*/
+
+body 
+	{
+	font-family: verdana, arial, sans-serif;
+	margin-top: 0em;
+	color: #666666;
+	font-size: 11pt;
+	padding: 1.5em;
+	padding-top: 0em;
+	padding-left: 0.7em;
+	}
+
+BODY.text  {
+	margin : 2pt;
+}
+/* Titles */
+
+h2{
+	margin: 0 0 0 0em;
+	padding: 0;
+	font-size: 1.4em;
+	font-weight: normal;
+	}
+h3 {
+	text-align: left;
+	font-size: 1.25em;
+	margin-top: 1.001em;
+	margin-bottom: 0.250em;
+	font-weight: normal;
+	}
+
+/* Tables */
+
+table {
+	margin-top: 1.2em
+	}
+
+BODY.text  table {
+	margin : 0pt;
+}
+
+.table_exe_1 {
+	margin-top: 1.2em; 
+	border: 1px solid #000000;
+	}
+.exe_st_grp {
+	table-layout: fixed; 
+	border: 1px solid #999999;
+	padding: 0.417em;
+	width:99%
+	}
+.exe_st_grp1 {
+	table-layout: fixed; 
+	border: 1px solid #999999;
+	margin-top: -0.5em; 
+	padding: 0.417em;
+	width:99%
+	}
+/* Figure */
+.img
+{
+	margin-left: 3.73em; 
+	margin-top: 0.417em;
+	margin-bottom: 0.417em;
+}
+#relevantButtons span	{
+	padding: 0 5em;}
+
+ol.taskPresentation	{
+	list-style-type: none;
+	margin: 1em 0 0;
+	padding: 0;}
+
+ol.taskPresentation li	{
+	-moz-border-radius: .7em;
+	-webkit-border-radius: .7em;}
+
+ol.taskPresentation li h4	{
+	background-color: #5A7887;
+	color: #ffffff;
+	font-size: 11.3pt; 
+	font-weight: normal;
+	margin-top: 0.834em; 
+	margin-bottom: 0.834em;
+	padding: 0.125em; 
+	}
+ol ul
+	{
+		list-style-type: disc;
+	}
+ol ul ul
+	{
+		list-style-type: square;
+	}
+ol ul ul ul
+	{
+		list-style-type: circle;
+	}
+ol ul ul ul ul
+	{
+		list-style-type: disc;
+	}
+ol ul ul ul ul ul
+	{
+		list-style-type: square;
+	}
+ol ul ul ul ul ul ul
+	{
+		list-style-type: circle;
+	}
+
+.step_p1
+{
+	margin-left: 2.919em;  
+	text-indent: -1.251em; 
+	text-align: left; 
+	margin-top: 0.500em; 
+	margin-bottom: 0.500em;
+}
+.normal {
+	margin-left: 2.919em; 
+	text-align: left; 
+	margin-top: 0.500em; 
+	margin-bottom: 0.500em;
+	}
+.note
+{
+	margin-top: -0.9em; 
+	margin-bottom: 0.1em;
+	font-size: 0.8em;
+}
+/* Added for Desktop HTML */
+.hr
+{
+color: #FCCD63;
+height: 0.1em;
+margin-left: 0.1em;
+margin-right: 0.1em;
+margin-top: -0.1em;
+}
+.hr1
+{
+color: #FCCD63;
+height: 0.1.5em;
+}
+.header a {
+	text-decoration:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:0.75em;
+	font-weight:bold;
+	color:#666666;
+}
+.header a:hover{
+	text-decoration:underline;
+}
+
+ul{ font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 4px; margin-bottom: 4px  }
+ol{ font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 4px; margin-bottom: 4px  }
+li{ font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 4px; margin-bottom: 4px  }
+ol {list-style-type: decimal}
+ol ol {list-style-type:upper-alpha}
+ol ol ol {list-style-type:upper-roman}
+ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol {list-style-type:lower-roman}
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+/* End Here */
+.exampleGraphic {
+	margin: 3px 3.73em;
+	padding: 0 5px;
+	width: 355px;}
+	
+#playerBox, #playerBoxTask{
+	background-image:url(../images/animate_bkgrnd.gif);
+	background-repeat:repeat-x;
+	display:block;
+	border-right:#999999 solid 1px;
+	width:350px;
+	height:24px;
+	margin-top:-12px;
+}
+#playerBoxTask{
+width:300px;
+}

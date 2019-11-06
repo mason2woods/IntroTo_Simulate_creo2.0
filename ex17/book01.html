@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20588_UsingAutoGEMSettingsMixedMeshes1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_17" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_17&#34;, T3911_17)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 使用 AutoGEM 设置 - 混合网格</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>使用实体和壳元素创建混合网格。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在本练习中，您将使用 Creo Simulate 探索一些网格化功能。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\MixedMeshes</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">MESHING_SIMULATE.PRT 
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 MESHING.PRT</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 创建体积块区域。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“区域”(Regions) 组中的“体积块区域”(Volume Region) 下拉菜单中单击<b>“拉伸”(Extrude) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011799.gif">。“拉伸”(Extrude) 操控板随即出现。
+                  </p>
+                  <p class="step_p1">3. 选择<b>“放置”(Placement)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“定义”(Define)</b>。将出现“草绘”(Sketch) 对话框。
+                  </p>
+                  <p class="step_p1">5. 在模型中选择显示的曲面。</p>
+                  <p class="step_p1">6. 单击<b>“草绘”(Sketch)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000161195.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000161195.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000161195.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“草绘”(Sketch)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 在“设置”(Setup) 组中单击<b>“草绘视图”(Sketch View) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012361.gif"> 以定向草绘平面。
+                  </p>
+                  <p class="step_p1">9. 草绘一个以该孔为中心的直径为 25.0 mm 的圆，如图所示。</p>
+                  <p class="step_p1">10. 单击<b>“确定”(OK) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013516.gif"> 以返回到“拉伸”(Extrude) 操控板。
+                  </p>
+                  <p class="step_p1">11. 单击<b>“指定的深度”(Specified Depth) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013801.gif">，然后在该字段中键入 <b>65.0</b>。
+                  </p>
+                  <p class="step_p1">12. 单击<b>“应用保存更改”(Apply-Save Changes) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012476.gif">。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000161194.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000161194.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000161194.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 创建壳对。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“理想化”(Idealizations) 组中的“壳对”(Shell Pair) 下拉菜单中单击<b>“壳对”(Shell Pair)</b><b> &gt; “检测壳对”(Detect Shell Pairs)</b>。“自动检测壳对”(Auto Detect Shell Pairs) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 校验<b>“使用几何分析”(Use Geometry Analysis)</b> 已被选定。
+                  </p>
+                  <p class="step_p1">4. 在“特征厚度”(Characteristic Thickness) 字段中键入 <b>1.0</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“开始”(Start)</b>。“自动检测壳对”(Auto Detect Shell Pairs) 对话框随即关闭。
+                  </p>
+                  <p class="step_p1">6. 在模型树中，展开<b>“理想化”(Idealizations)</b> 和<b>“壳对”(Shell Pairs)</b>。请注意，列出三个壳对。选择每个壳对以在模型中将其突出显示。
+                  </p>
+                  <p class="step_p1">7. 右键单击 <b>ShellPair1</b>，然后选择<b>“删除”(Delete)</b>。在“确认”(Confirmation) 对话框中单击<b>“是”(Yes)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">由于要在应力计算中考虑均匀的厚度，因此需要删除壳对。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 从 AutoGEM 组中单击<b>“审阅几何”(Review Geometry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000163493.gif">。“模拟几何”(Simulation Geometry) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">9. 查看壳曲面是否成功配对。请注意，在 Creo Simulate 中默认情况下为模型中找到的所有壳曲面分配绿色。浅灰色已分配给实体曲面。可通过单击<b>“更改颜色”(Change Color) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011802.gif"> 更改颜色。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“应用”(Apply)</b>。请注意模型中的中间平面压缩，如图所示。
+                  </p>
+                  <p class="step_p1">11. 单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000161193.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000161193.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000161193.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 将网格应用到模型中。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">3. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。请注意，将壳连接到实体的洋红色线。默认情况下，它们是连接实体和壳元素时在 Creo Simulate 中自动创建的链接。它们考虑了这些类型元素之间的旋转耦合。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">由于实体元素没有使其旋转的自由度，且壳具有所有可用的平移和旋转自由度，因此，软件使用这些链接可正确地将变形从壳传递到实体中。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000161192.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000161192.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000161192.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">5. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">6. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 使用新的 AutoGEM 设置应用新网格。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 从 AutoGEM 组的 AutoGEM 下拉菜单中选择<b>“设置”(Settings)</b>。“AutoGEM 设置”(AutoGEM Settings) 对话框随即出现。在“设置”(Settings) 选项卡中，选择<b>“根据需要创建连接”(Create Links Where Needed)</b>。
+                  </p>
+                  <p class="step_p1">2. 选择<b>“限制”(Limits)</b> 选项卡。如图所示完成字段。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000161191.gif" width="243"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">5. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。请注意，将壳连接到实体的洋红色线。默认情况下，它们是连接实体和壳元素时在 Creo Simulate 中自动创建的链接。它们考虑了这些类型元素之间的旋转耦合。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">由于实体元素没有使其旋转的自由度，且壳具有所有可用的平移和旋转自由度，因此，软件使用这些链接可正确地将变形从壳传递到实体中。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000161190.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000161190.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000161190.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">7. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">8. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 调整 AutoGEM 设置以消除实体壳链接。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 从 AutoGEM 组的 AutoGEM 下拉菜单中选择<b>“设置”(Settings)</b>。“AutoGEM 设置”(AutoGEM Settings) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">2. 选择<b>“设置”(Settings)</b> 选项卡。取消选中<b>“根据需要创建链接”(Create Links Where Needed)</b>。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">5. 保留所有默认设置并单击<b>“创建”(Create)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">元素之间不再存在洋红色链接。元素之间已包括枢轴。如果载荷作用在此元件上，则可能会使通过壳元素建模的区域绕着连接到实体元素的枢轴旋转。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000161189.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000161189.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000161189.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">7. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">8. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_17" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_17&#34;, T3911_17)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

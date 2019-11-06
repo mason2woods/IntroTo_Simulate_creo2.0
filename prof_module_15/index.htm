@@ -1,0 +1,239 @@
+﻿<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META http-equiv=Cache-Control content=private>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+
+<script language="JavaScript1.2">
+	var mc_result_resp;
+	var mc_result_block;
+
+	var resp_html_begin = "<TABLE style=\"BORDER-RIGHT: #c0c0c0 1px dotted; PADDING-RIGHT: 15px; BORDER-TOP: #c0c0c0 1px dotted; PADDING-LEFT: 15px; FONT-SIZE: 8.5pt; PADDING-BOTTOM: 15px; BORDER-LEFT: #c0c0c0 1px dotted; COLOR: #000000; PADDING-TOP: 15px; BORDER-BOTTOM: #c0c0c0 1px dotted; FONT-FAMILY: Verdana; BACKGROUND-COLOR: white; TEXT-DECORATION: none\" width=\"100%\"><TBODY><TR><TD><SPAN>";
+
+	var resp_html_end = "</SPAN></TD></TR></TBODY></TABLE>";
+
+var correct_langs = {EN:"Correct",       
+                     DE:"korrekt",       
+                     FR:"Correct",       
+                     IT:"Corretto",
+                     KO:"\ub9de\uc74c",
+                     TW:"\u6b63\u78ba",
+                     CN:"\u6b63\u786e",
+                     JA:"\u6b63\u3057\u3044"};
+
+var incorrect_langs = {EN:"Incorrect",
+                       DE:"Falsch",
+                       FR:"Incorrect",
+                       IT:"Errato",
+                       KO:"\ubd80\uc815\ud655\ud55c",
+                       TW:"\u4e0d\u6b63\u78ba",
+                       CN:"\u4e0d\u6b63\u786e",
+                       JA:"\u4e0d\u6b63\u78ba"};
+
+var answer_langs = {EN:"The correct answer is %0s",
+                    DE:"Die korrekte Antwort ist %0s",
+                    FR:"La r\u00e9ponse correcte est %0s",
+                    IT:"La risposta corretta \u00e8 %0s", 
+                    KO:"\ub9de\uc740 \uc751\ub2f5\uc740 %0s \uc774\ub2e4",
+                    TW:"\u6b63\u786e\u7b54\u590d\u662f%0s", 
+                    CN:"\u6b63\u786e\u7b54\u590d\u662f%0s", 
+                    JA:"\u6b63\u3057\u3044\u7b54\u3048\u306f %0s \u3067\u3042\u308b"};
+
+function Localize(text)
+{
+    return text;
+}
+
+	function getNextSibling(startBrother){
+		var endBrother = startBrother.nextSibling;
+		while(endBrother !=null && endBrother.nodeType != 1){
+			endBrother = endBrother.nextSibling;
+		}
+		return endBrother;
+	}						 
+
+    function ShowAnswer(obj){
+	    var usr_ans = obj.value;
+		var mc_form = obj.form;
+        var correct_ans = mc_form.ans.value;
+		var hlp_s = mc_form.help_str.value;		
+		var tmp_s = "";
+		
+		var lang =  Localize("CN");
+		
+		var correct_prompt = correct_langs[lang]; 
+		var incorrect_prompt = incorrect_langs[lang]; 
+		var ans_s = answer_langs[lang];
+		var re = /\%0s/;
+
+		if(usr_ans == correct_ans)
+		{
+			tmp_s =  "<FONT color=green><B>" + correct_prompt + "</B></FONT>";
+    	}
+		else
+		{
+			ans_s = ans_s.replace(re, correct_ans);
+			tmp_s = "<FONT color=red><B>" + incorrect_prompt +"</B></FONT> " + ans_s;
+		}
+	    if(hlp_s != "NA")
+		{
+			tmp_s = tmp_s + " -- " + hlp_s;
+		}
+
+		var next_ele = getNextSibling(mc_form);
+
+
+		if(next_ele != null && next_ele.tagName == 'DIV')
+		{
+			mc_result_block = next_ele;
+
+		}
+		else
+		{
+			mc_result_block = document.createElement("DIV");
+			mc_form.parentNode.appendChild(mc_result_block);
+		}
+		mc_result_block.innerHTML = resp_html_begin + tmp_s + resp_html_end;
+	}
+</script>
+
+<STYLE><!--table { font-family: Verdana, Arial, Helvetica, sans-serif; color: #666666; page-break-inside: avoid }
+tr { font-family: Verdana, Arial, Helvetica, sans-serif; color: #666666}
+td { font-family: Verdana, Arial, Helvetica, sans-serif; color: #666666}
+body,p {font-family: Verdana, Arial, sans-serif; font-size: 15px; font-weight: normal; color: #666666; line-height: 18px; margin-top: 2px; margin-bottom: 3px  }
+
+ul{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; color: #666666; margin-top: 4px; margin-bottom: 4px  }
+ol{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; color: #666666; margin-top: 4px; margin-bottom: 4px  }
+li{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; color: #666666; margin-top: 4px; margin-bottom: 4px  }
+
+H1 {font-family: Verdana, Arial, sans-serif; font-size: 26px; font-weight: bold; color: #666666; margin-bottom: 1px}
+H2 {font-family: Verdana, Arial, sans-serif; font-size: 25px; font-weight: normal; color: #666666}
+H3 {font-family: Verdana, Arial, sans-serif; font-size: 24px; font-weight: normal; color: #666666; margin-bottom: 8px }
+H4 {font-family: Verdana, Arial, sans-serif; font-size: 18px; font-weight: bold; color: #666666; margin-top: 10px; margin-bottom: 3px  }
+H5 {font-family: Verdana, Arial, sans-serif; font-size: 16px; font-weight: bold; color: #666666; line-height: 22px; margin-top: 2px; margin-bottom: -5px }
+H6 {font-family: Verdana, Arial, sans-serif; font-size: 15px; font-weight: normal; color: #666666; line-height: 18px; margin-top: 2px; margin-bottom: 3px  }
+cite { font-family: Verdana,  Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #666666; font-style: normal; margin-top: 1px}
+samp { font-family: Verdana,Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; color: #ffffff; font-style: normal; margin-top: 10px; margin-bottom: 10px }
+code{ font-family: Verdana,  Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #666666; font-style: normal; margin-top: 1px}
+pre { font-family: Arial, Helvetica, sans-serif; font-size: 1px; font-weight: normal }
+
+
+.Image { text-align: left}
+.headerrow { font-family: Verdana, Arial, sans-serif; font-size: 15px; background-color:#cccccc; font-weight: bold; text-align: center}
+.padding  {font-family: Verdana, Arial, sans-serif; font-size: 15px; font-weight: normal; color: #666666; margin-top: 15px; margin-bottom: 15px; text-align: left }
+.task2bgcolor { background-color:#899ca9 }
+.column1border { border-style:solid; width: 72px; border-width:0px; border-top-color:#ffffff; border-left-color:#CCCCCC; border-right-color:#E9E7E2; border-bottom-color:#ffffff}
+.column2border { border-style:solid; border-width:0px; border-top-color:#ffffff; border-left-color:#E9E7E2; border-right-color:#CCCCCC; border-bottom-color:#ffffff}
+.column3border { border-style:solid; width: 145px; border-width:0px; border-top-color:#ffffff; border-left-color:#CCCCCC; border-right-color:#E9E7E2; border-bottom-color:#ffffff}
+.tableborder { border-style:solid; border-width:1px; border-top-color:#cccccc; border-right-color:#cccccc; border-left-color:#cccccc; border-bottom-color:#cccccc}.style1 {color: #666666}.style1 {color: #666666}.style3 {font-face:verdana; font-size:9pt; color: #FFFFFF}--></STYLE>
+<link rel='stylesheet' href='viewer.css' type='text/css'>
+</HEAD>
+<BODY text=#000000 bottomMargin=0 bgColor=#ffffff leftMargin=0 topMargin=0 rightMargin=0 marginheight="0" marginwidth="0">
+<table class="header" width="100%" border="0" cellpadding="2" id='link_p15'>
+  <tr>
+    <td align='left' id='exetd'><img src="images/home.gif" alt="返回练习列表" align='absbottom'><a href='../index.htm' target='_parent'>返回练习</a></td>
+<td>&nbsp;</td>
+<td align='right' id='exetd'><img src="images/check.gif" alt="将练习标记为已完成" ><a href='../index.htm' target='_parent' onClick='parent.showCheck(&quot;link_p15&quot;, link_p15)'>标记为已完成并返回</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<table border='0' width='100%'><tr><td height='2px' bgcolor='#FCCD63'></td></tr></table>
+<!--START_PROF_MC_EN_Q27705-->
+<TABLE cellSpacing=5 cellPadding=5 width="100%" border=0><TBODY><TR><TD>
+<FORM>
+<H6><STRONG>1.</STRONG>正确还是错误？可通过混合使用实体元素和壳元素分析 Simulate 模型。</H6>
+<TABLE>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=A name=mc_radio> A - </NOBR></P></TD><TD valign=top><P>正确</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=B name=mc_radio> B - </NOBR></P></TD><TD valign=top><P>错误</P></TD></TR>
+</TABLE>
+	<input type=hidden value=A name=ans>
+	<input type=hidden value=cn name=lang>
+	<input type=hidden name=help_str value="NA">
+</FORM>
+</TD></TR></TBODY></TABLE>
+<!--END_PROF_MC_EN_Q27705-->
+
+
+<!--START_PROF_MC_EN_Q27709-->
+<TABLE cellSpacing=5 cellPadding=5 width="100%" border=0><TBODY><TR><TD>
+<FORM>
+<H6><STRONG>2.</STRONG>Simulate 中的焊缝...</H6>
+<TABLE>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=A name=mc_radio> A - </NOBR></P></TD><TD valign=top><P>表示氧乙炔焊或电弧焊连接。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=B name=mc_radio> B - </NOBR></P></TD><TD valign=top><P>封闭中间曲面之间的间隙。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=C name=mc_radio> C - </NOBR></P></TD><TD valign=top><P>必须定义制造信息。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=D name=mc_radio> D - </NOBR></P></TD><TD valign=top><P>必须定义材料类型。</P></TD></TR>
+</TABLE>
+	<input type=hidden value=B name=ans>
+	<input type=hidden value=cn name=lang>
+	<input type=hidden name=help_str value="NA">
+</FORM>
+</TD></TR></TBODY></TABLE>
+<!--END_PROF_MC_EN_Q27709-->
+
+
+<!--START_PROF_MC_EN_Q25791-->
+<TABLE cellSpacing=5 cellPadding=5 width="100%" border=0><TBODY><TR><TD>
+<FORM>
+<H6><STRONG>3.</STRONG>后处理梁结果时可审阅以下哪些应力：</H6>
+<TABLE>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=A name=mc_radio> A - </NOBR></P></TD><TD valign=top><P>折弯。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=B name=mc_radio> B - </NOBR></P></TD><TD valign=top><P>拉伸。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=C name=mc_radio> C - </NOBR></P></TD><TD valign=top><P>von Mises。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=D name=mc_radio> D - </NOBR></P></TD><TD valign=top><P>最大剪应力。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=E name=mc_radio> E - </NOBR></P></TD><TD valign=top><P>以上全部。</P></TD></TR>
+</TABLE>
+	<input type=hidden value=E name=ans>
+	<input type=hidden value=cn name=lang>
+	<input type=hidden name=help_str value="NA">
+</FORM>
+</TD></TR></TBODY></TABLE>
+<!--END_PROF_MC_EN_Q25791-->
+
+
+<!--START_PROF_MC_EN_Q25907-->
+<TABLE cellSpacing=5 cellPadding=5 width="100%" border=0><TBODY><TR><TD>
+<FORM>
+<H6><STRONG>4.</STRONG>正确还是错误？必须为零件或装配手动选择或创建壳对。</H6>
+<TABLE>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=A name=mc_radio> A - </NOBR></P></TD><TD valign=top><P>正确</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=B name=mc_radio> B - </NOBR></P></TD><TD valign=top><P>错误</P></TD></TR>
+</TABLE>
+	<input type=hidden value=B name=ans>
+	<input type=hidden value=cn name=lang>
+	<input type=hidden name=help_str value="NA">
+</FORM>
+</TD></TR></TBODY></TABLE>
+<!--END_PROF_MC_EN_Q25907-->
+
+
+<!--START_PROF_MC_EN_Q25909-->
+<TABLE cellSpacing=5 cellPadding=5 width="100%" border=0><TBODY><TR><TD>
+<FORM>
+<H6><STRONG>5.</STRONG> 要创建标准壳理想化，必须指定...</H6>
+<TABLE>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=A name=mc_radio> A - </NOBR></P></TD><TD valign=top><P>名称、类型、参考和属性。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=B name=mc_radio> B - </NOBR></P></TD><TD valign=top><P>仅名称和类型。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=C name=mc_radio> C - </NOBR></P></TD><TD valign=top><P>仅名称和参考。</P></TD></TR>
+	<TR><TD valign=top width=50><P><NOBR><INPUT onclick="ShowAnswer(this);" type=radio value=D name=mc_radio> D - </NOBR></P></TD><TD valign=top><P>仅名称和属性。</P></TD></TR>
+</TABLE>
+	<input type=hidden value=A name=ans>
+	<input type=hidden value=cn name=lang>
+	<input type=hidden name=help_str value="NA">
+</FORM>
+</TD></TR></TBODY></TABLE>
+<!--END_PROF_MC_EN_Q25909-->
+
+
+<table border='0' width='100%'><tr><td height='2px' bgcolor='#FCCD63'></td></tr></table>
+<table class="header" width="100%" border="0" cellpadding="2" id='link_p15'>
+  <tr>
+    <td align='left' id='exetd'><img src="images/home.gif" alt="返回练习列表" align='absbottom'><a href='../index.htm' target='_parent'>返回练习</a></td>
+<td>&nbsp;</td>
+<td align='right' id='exetd'><img src="images/check.gif" alt="将练习标记为已完成" ><a href='../index.htm' target='_parent' onClick='parent.showCheck(&quot;link_p15&quot;, link_p15)'>标记为已完成并返回</a></div></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</BODY>
+</HTML>

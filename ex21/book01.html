@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20787_TreatingSingularities1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_21" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_21&#34;, T3911_21)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 了解奇点</h2><br><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Singularities</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">FRICTION_GEAR_SHAFT_SIMULATE.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 FRICTION_GEAR_SHAFT.PRT。</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义 Creo Simulate 测量。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“测量”(Measures) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011918.gif">。将出现“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 如图所示完成字段。要选择 <b>PNT1</b>，请单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif">，然后在模型中选择 PNT1 基准特征。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">已在 Z 方向上为模型中的 PNT2、PNT3 和 PNT4 定义了总共四个位移测量。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000169442.gif" width="222"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 在“测量”(Measures) 对话框中，单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">7. 如图所示完成字段。要选择约束，请单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif">。在模型树中，选择 <b>Constraint2</b>。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">已经在模型中的 Constraint2 处预先定义了沿 Z 轴的反作用测量。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">9. 在“测量”(Measures) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000169441.gif" width="230"></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 为模型定义和运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>friction_gear_SPA</b>。
+                        </li>
+                        <li>选择显示在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中的约束集和载荷集。</li>
+                        <li>选择<b>“收敛”(Convergence)</b> 选项卡。将默认的<b>“单通道自适应”(Single-Pass Adaptive)</b> 方法保持为选定状态。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">6. 选择 <b>friction_gear_SPA</b>，然后单击<b>“复制”(Copy) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011785.gif">。会列出新的分析，标题为 Copy_of_friction_gear_SPA。
+                  </p>
+                  <p class="step_p1">7. 选择已复制的分析并单击<b>“编辑”(Edit)</b><b> &gt; “分析/研究”(Analysis/Study)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>friction_gear_MPA</b>。
+                        </li>
+                        <li>选择<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中选择<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“收敛百分比”(Percent Convergence) 字段中键入 <b>8</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b>。
+                        </li>
+                        <li>校验<b>“局部位移、局部应变能和全局 RMS 应力”(Local Displacement， Local Strain Energy and Global RMS Stress)</b> 已被选中。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">9. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">10. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">11. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>friction_gear_SPA</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">13. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">在汇总报告中，检查应力和变形值。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">14. 关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 选择 <b>friction_gear_MPA</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">16. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">17. 关闭所有对话框并返回到 Creo Simulate 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_21" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_21&#34;, T3911_21)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

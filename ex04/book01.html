@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid19898_SelectingAConvergenceMethod1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_04" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_04&#34;, T3911_04)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 选择收敛方法</h2><br><p style="margin-top: 0pt">研究 Simulate 提供的不同收敛方法的特征。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Convergence</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png"> CAD_GEOM_PLASTIC_CLIP_SIMULATE.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 CAD_GEOM_PLASTIC_CLIP.PRT。</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 打开 Simulate 并向模型中添加约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 启动 Simulate 应用程序。</p>
+                  <p class="step_p1">2. Simulate 应用程序随即打开。零件的材料已被分配。要查看材料分配，请在模型树中展开<b>“材料分配”(Material Assignments)</b>。
+                  </p>
+                  <p class="step_p1">3. 右键单击 <b>Material Assign1</b>，然后选择<b>“编辑定义”(Edit Definition)</b>。将出现“材料分配”(Material Assignment) 对话框。
+                  </p>
+                  <p class="step_p1">4. 查看材料信息并在完成后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000203309.gif" width="224"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 由于基础曲面粘贴在壁上，因此它必须在所有自由度中加以约束。要约束基础，选择零件的基础。</p>
+                  <p class="step_p1">6. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。
+                  </p>
+                  <p class="step_p1">7. 将出现“约束”(Constraint) 对话框。如图所示完成字段，然后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000203358.gif" width="324"></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 将 1 牛顿的总修剪力应用到模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在模型上，选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203357.gif', 'Enlarge', 'width=629, height=349,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203357.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203357.gif', 'Enlarge', 'width=629, height=349,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">2. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。
+                  </p>
+                  <p class="step_p1">3. 将出现“力/力矩载荷”(Force/Moment Load) 对话框。在“属性”(Properties) 部分中，单击<b>“高级”(Advanced)</b> 以展开此部分。
+                  </p>
+                  <p class="step_p1">4. 如图所示完成字段，然后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203356.gif', 'Enlarge', 'width=403, height=595,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203356.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203356.gif', 'Enlarge', 'width=403, height=595,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义多通道自适应分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。
+                  </p>
+                  <p class="step_p1">2. 将出现“分析和设计研究”(Analyses and Design Studies) 对话框。选择<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。
+                  </p>
+                  <p class="step_p1">3. 将出现“静态分析定义”(Static Analysis Definition) 对话框。如图所示完成字段，然后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203355.gif', 'Enlarge', 'width=481, height=685,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203355.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203355.gif', 'Enlarge', 'width=481, height=685,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义单通道自适应分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，选择<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。
+                  </p>
+                  <p class="step_p1">2. 将出现“静态分析定义”(Static Analysis Definition) 对话框。如图所示完成字段，然后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203354.gif', 'Enlarge', 'width=483, height=685,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203354.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203354.gif', 'Enlarge', 'width=483, height=685,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 定义快速检查分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，选择<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。
+                  </p>
+                  <p class="step_p1">2. 将出现“静态分析定义”(Static Analysis Definition) 对话框。如图所示完成字段，然后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203353.gif', 'Enlarge', 'width=483, height=686,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203353.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203353.gif', 'Enlarge', 'width=483, height=686,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 定义 P1 分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，选择<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。
+                  </p>
+                  <p class="step_p1">2. 将出现“静态分析定义”(Static Analysis Definition) 对话框。如图所示完成字段，然后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203352.gif', 'Enlarge', 'width=483, height=686,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203352.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203352.gif', 'Enlarge', 'width=483, height=686,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 分析全部在“分析和设计研究”(Analyses and Design Studies) 对话框中列出，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203351.gif', 'Enlarge', 'width=463, height=349,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203351.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203351.gif', 'Enlarge', 'width=463, height=349,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 7.</b> 创建包含所有分析的批处理文件并从操作系统中执行它。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，选择 <b>MPA</b>。 
+                  </p>
+                  <p class="step_p1">2. 单击<b>“运行”(Run)</b><b> &gt; “批处理”(Batch)</b>。
+                  </p>
+                  <p class="step_p1">3. 将出现“批处理”(Batch) 对话框。选择将保存文件的位置。在“文件名”(File Name) 字段中，键入 <b>mecbatch</b>。单击<b>“保存”(Save)</b>。
+                  </p>
+                  <p class="step_p1">4. 将出现询问“是否进行错误检测?”的“问题”(Question) 对话框。单击<b>“是”(Yes)</b>。
+                  </p>
+                  <p class="step_p1">5. 对其余三个分析重复上述步骤。对每个文件使用相同的文件名 mecbatch。对于询问“指定的批处理文件 "mecbatch.bat" 已存在。是否将此设计研究添加到文件?”的每个分析将出现附加“问题”(Question) 对话框。对每个设计研究单击<b>“是”(Yes)</b>。
+                  </p>
+                  <p class="step_p1">6. 转到文件 mecbatch.bat 的存储位置。双击文件名。</p>
+                  <p class="step_p1">7. cmd.exe 窗口打开表示文件正在运行中。当窗口关闭时，运行完成。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 返回到 Creo Simulate 窗口。“分析和设计研究”(Analyses and Design Studies) 对话框中分析名称旁边的绿色选中标记表示运行已完成，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203350.gif', 'Enlarge', 'width=466, height=351,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203350.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203350.gif', 'Enlarge', 'width=466, height=351,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 8.</b> 查看分析结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，选择 <b>MPA</b>。单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif">。
+                  </p>
+                  <p class="step_p1">2. 将出现显示分析结果的“运行状况”(Run Status) 对话框，如图所示。</p>
+                  <p class="step_p1">3. 查看结果： </p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>收敛误差范数消息。</li>
+                        <li>力平衡。</li>
+                        <li>测量结果。</li>
+                        <li>资源消耗。</li>
+                     </ul>
+                  </div>
+                  <p class="normal">完成后单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">4. 对其余三个分析中的每一个重复上述步骤。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000203349.gif', 'Enlarge', 'width=678, height=752,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000203349.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000203349.gif', 'Enlarge', 'width=678, height=752,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_04" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_04&#34;, T3911_04)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

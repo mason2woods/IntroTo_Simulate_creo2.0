@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid21336_1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_32" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_32&#34;, T3911_32)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 使用连接工具连接壳中间曲面装配</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>使用壳理想化。</li>
+            <li>使用焊缝连接装配的零件。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在本练习中，您将分析由钣金元件组成的装配中的应力和变形。与宽度/长度相比，要分析的几何的厚度较小且使用了壳理想化。因此，它允许您快速找到解而不使用默认的实体元素。</p>
+         <p>该模型是在 Creo Parametric 中将多个零件装配到一起而形成的装配。在模型的一些位置中，板较短，因此连接零件之间存在间隙。在模型中定义这些间隙以弥补焊接制造公差。因此，不会像在曲面以 0 偏移或间隙配对的任何其他区域中一样自动连接板。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Connection</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002490.png">WELDED_CANTILEVER_SIMULATE.ASM 
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 WELDED_CANTILEVER.ASM</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义壳对理想化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 单击“理想化”(Idealizations) 组的“壳对”(Shell Pair) 下拉菜单，然后选择<b>“检测壳对”(Detect Shell Pairs)</b>。“自动检测壳对”(Auto Detect Shell Pairs) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 校验<b>“使用几何分析”(Use Geometry Analysis)</b> 已被选中。
+                  </p>
+                  <p class="step_p1">4. 在“特征厚度”(Characteristic Thickness) 字段中键入 <b>5</b>。
+                  </p>
+                  <p class="step_p1">5. 在模型树中，选择 <b>WELDED_CANTILEVER.ASM</b> 以为壳理想化选择装配的所有元件。
+                  </p>
+                  <p class="step_p1">6. 在“自动检测壳对”(Auto Detect Shell Pairs) 对话框中，单击<b>“开始”(Start)</b>。
+                  </p>
+                  <p class="step_p1">7. 在模型树中，展开<b>“理想化”(Idealizations)</b> 和<b>“壳对”(Shell Pairs)</b>。请注意，根据相对曲面相距 5 mm 这一规则检测到 13 个壳对。
+                  </p>
+                  <p class="step_p1">8. 单击每个壳对以在模型中标识其位置。</p>
+                  <p class="step_p1">9. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">10. 从 AutoGEM 组中单击<b>“审阅几何”(Review Geometry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000163493.gif">。“模拟几何”(Simulation Geometry) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 单击<b>“应用”(Apply)</b>。请注意已壳理想化的板的显示，如图所示。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">请注意，未能成功压缩 LUG.PRT 和 CYLINDER.PRT 的一些区域。前者是由于可变的厚度，后者是因为厚度大于 5 mm。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">12. 在“模拟几何”(Simulation Geometry) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177109.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177109.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177109.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义手动和可变壳对理想化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在模型树中选择 LUG.PRT。单击鼠标右键并选择<b>“打开”(Open)</b>。零件将在单独的 Creo Simulate 窗口中打开。
+                  </p>
+                  <p class="step_p1">2. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">3. 在“理想化”(Idealizations) 组中单击<b>“壳对”(Shell Pair) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011922.gif">。“壳对定义”(Shell Pair Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">4. 校验已在“类型”(Type) 部分选择了<b>“常量”(Constant)</b>，且在“参考”(References) 部分选择了<b>“自动选择相对曲面”(Auto Select Opposing Surfaces)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在模型中，选择显示的曲面。</p>
+                  <p class="step_p1">6. 在“壳对定义”(Shell Pair Definition) 对话框中，单击<b>“重复”(Repeat) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012801.gif"> 创建此壳对并清除该对话框以创建新壳对。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177108.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177108.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177108.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在“类型”(Type) 部分中，选择<b>“变量”(Variable)</b>。
+                  </p>
+                  <p class="step_p1">8. 在模型中，选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177139.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177139.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177139.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 按住 CTRL 键并选择相对的倾斜曲面。</p>
+                  <p class="step_p1">10. 要为中间平面放置拾取参考，请单击“选择放置曲面”(Select a placement surface) 字段。在模型树中选择 <b>DTM1</b>。
+                  </p>
+                  <p class="step_p1">11. 在“壳对定义”(Shell Pair Definition) 对话框中，单击<b>“重复”(Repeat) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012801.gif"> 创建此壳对并清除该对话框以创建新壳对。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在“类型”(Type) 部分中，选择<b>“常量”(Constant)</b>。校验<b>“自动选择相对曲面”(Auto Select Opposing Surfaces)</b> 已被选中。
+                  </p>
+                  <p class="step_p1">13. 在模型中，选择显示的曲面。</p>
+                  <p class="step_p1">14. 单击<b>“接受”(Accept) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012423.gif">。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177107.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177107.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177107.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 在模型树中，展开<b>“理想化”(Idealizations)</b> 和<b>“壳对”(Shell Pairs)</b>。请注意，创建了三个壳对。
+                  </p>
+                  <p class="step_p1">16. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">17. 从 AutoGEM 组中单击<b>“审阅几何”(Review Geometry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000163493.gif">。“模拟几何”(Simulation Geometry) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">18. 单击<b>“应用”(Apply)</b>。请注意已壳理想化的板的显示，如图所示。
+                  </p>
+                  <p class="step_p1">19. 单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000177106.gif" width="265"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">20. 单击<b>“文件”(File)</b><b> &gt; “保存”(Save)</b>。“保存对象”(Save Object) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">21. 使用默认的名称并单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">22. 单击<b>“文件”(File)</b><b> &gt; “关闭”(Close)</b></p>
+                  <p class="normal"> 以关闭该窗口并返回到主装配窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 校验并查看自动和手动创建的壳对。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从 AutoGEM 组中单击<b>“审阅几何”(Review Geometry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000163493.gif">。“模拟几何”(Simulation Geometry) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 单击<b>“应用”(Apply)</b>。请注意已壳理想化的板的显示，如图所示。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177105.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177105.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177105.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义焊缝以连接模型中的板。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“连接”(Connections) 组中单击<b>“焊缝”(Weld) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011981.gif">。“焊缝定义”(Weld Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 从“端焊缝类型”(End Weld Type) 下拉菜单中选择<b>“多对单延伸”(Extend Many to Single)</b>。
+                  </p>
+                  <p class="step_p1">4. 单击“参考”(References) 部分中的“曲面”(Surfaces) 字段。按住 CTRL 键，并在模型中选择所显示的四个曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177104.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177104.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177104.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177103.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177103.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177103.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在“曲面”(Surface) 字段中单击。在模型中，选择显示的曲面。</p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177102.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177102.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177102.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 从 AutoGEM 组中单击<b>“审阅几何”(Review Geometry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000163493.gif">。“模拟几何”(Simulation Geometry) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 单击<b>“应用”(Apply)</b>。请注意连接，如图所示。单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177101.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177101.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177101.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">10. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">11. 从“连接”(Connections) 组中单击<b>“焊缝”(Weld) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011981.gif">。“焊缝定义”(Weld Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">12. 从“类型”(Type) 下拉菜单中选择<b>“周边焊缝”(Perimeter Weld)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">13. 单击“参考”(References) 部分中的第一个“曲面”(Surface) 字段。在模型中，选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177100.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177100.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177100.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 单击“参考”(References) 部分中的第二个“曲面”(Surface) 字段。在模型中，选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177119.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177119.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177119.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 单击“属性”(Properties) 部分中的“边”(Edges) 字段。在模型中，选择显示的两条边。</p>
+                  <p class="step_p1">16. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177118.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177118.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177118.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">17. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">18. 从 AutoGEM 组中单击<b>“审阅几何”(Review Geometry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000163493.gif">。“模拟几何”(Simulation Geometry) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">19. 单击<b>“应用”(Apply)</b>。请注意连接，如图所示。单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177117.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177117.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177117.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">20. 启用<b>“点显示”(Point Display) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012324.gif">。
+                  </p>
+                  <p class="step_p1">21. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">22. 从“连接”(Connections) 组中单击<b>“焊缝”(Weld) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011981.gif">。“焊缝定义”(Weld Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">23. 从“类型”(Type) 下拉菜单中选择<b>“点焊”(Spot Weld)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">24. 单击“参考”(References) 部分中的第一个“曲面”(Surface) 字段。在模型中，选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177116.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177116.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177116.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">25. 单击“参考”(References) 部分中的第二个“曲面”(Surface) 字段。在模型中，选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177115.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177115.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177115.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">26. 在“属性”(Properties) 部分中选择<b>“阵列”(Pattern)</b>。选择阵列中的任意点。
+                  </p>
+                  <p class="step_p1">27. 在“直径”(Diameter) 字段中键入 <b>8</b>。
+                  </p>
+                  <p class="step_p1">28. 在“材料”(Material) 部分，单击<b>“更多”(More)</b>。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">29. 选择并根据需要将 <b>steel.mtl</b> 添加为材料。单击<b>“确定”(OK)。</b></p>
+                  <p class="normal"> 以返回到“焊缝定义”(Weld Definition) 对话框。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">30. 单击<b>“确定”(OK)</b>。图形表示如图所示。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">如果在定义“点焊”连接后利用“审阅几何”工具，则将不会看到模型中的任何更改。这些连接将不显示为所创建的周边焊缝或端焊缝的连接。 </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177114.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177114.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177114.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 定义剩余的载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“承载”(Bearing) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011763.gif">。将出现“承载载荷”(Bearing Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“边/曲线”(Edges/Curves)</b>。
+                  </p>
+                  <p class="step_p1">4. 在模型中，选择任何弯曲边，如图所示。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">软件将自动选择剩余的一半孔边。因此，两条边将显示在选择查询范围中。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">5. 在“力”(Force) 部分的 Y 字段中键入 <b>-30000</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177113.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177113.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177113.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 定义约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在模型树中，展开<b>载荷/约束</b>和<b>载荷集 ConstraintSet1</b>。
+                  </p>
+                  <p class="step_p1">2. 右键单击 <b>Constraint1</b>，然后选择<b>“编辑定义”(Edit Definition)</b>。将出现“约束”(Constraint) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 按住 CTRL 键并选择边，如图所示。</p>
+                  <p class="step_p1">4. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177112.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177112.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177112.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 7.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>welded_cantilever</b>。
+                        </li>
+                        <li>选择在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中显示的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                        <li>单击<b>“高级控制”(Advanced Control)</b>。“高级 SPA 收敛控制”(Advanced SPA Convergence Control) 对话框随即出现。完成以下步骤：
+                           <ul>
+                              <li>选择<b>“使用高级控制”(Use Advanced Controls)</b>。
+                              </li>
+                              <li>在“最大应力误差目标”(Maximum Stress Error Target) 字段中键入 <b>8</b>。
+                              </li>
+                              <li>在“局部应力误差目标”(Local Stress Error Target) 字段中键入 <b>10</b>。
+                              </li>
+                              <li>不要为“局部应力误差”(Local Stress Error) 字段选择任何参考。</li>
+                           </ul>
+                        </li>
+                        <li>在“高级 SPA 收敛控制”(Advanced SPA Convergence Control) 对话框中，单击<b>“确定”(OK)</b> 以返回至“静态分析定义”(Static Analysis Definition) 对话框。
+                        </li>
+                        <li>单击<b>“输出”(Output)</b> 选项卡。
+                        </li>
+                        <li>在“绘制栅格”(Plotting Grid) 字段中键入 <b>4</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>welded_cantilever</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">10. 关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 8.</b> 创建结果窗口并检查结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 窗口中选择 <b>welded_cantilever</b>。
+                  </p>
+                  <p class="step_p1">2. 单击<b>“审阅结果”(Review Results) </b><img alt="Graphic" src="graphics/en_zh-cn_0000176938.gif">。将出现“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>校验已将<b>“条纹”(Fringe)</b> 选定为“显示”(Display) 类型。
+                        </li>
+                        <li>单击<b>“数量”(Quantity)</b> 选项卡。
+                        </li>
+                        <li>校验<b>“应力”(Stress)</b> 已选定。
+                        </li>
+                        <li>从下拉菜单中选择 <b>MPa</b>。
+                        </li>
+                        <li>从“分量”(Component) 下拉菜单中选择 <b>von Mises</b>。
+                        </li>
+                        <li>单击<b>“显示选项”(Display Options)</b> 选项卡。如图所示完成字段。
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000176260.gif', 'Enlarge', 'width=418, height=310,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000176260.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000176260.gif', 'Enlarge', 'width=418, height=310,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 单击<b>“确定并显示”(OK and Show)</b>。
+                  </p>
+                  <p class="step_p1">5. 检查 von Mises 应力条纹图。标识连接的行为。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177111.gif', 'Enlarge', 'width=450, height=250,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177111.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177111.gif', 'Enlarge', 'width=450, height=250,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 创建最大位移大小的另一个结果窗口，并检查显示的结果。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177110.gif', 'Enlarge', 'width=450, height=237,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177110.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177110.gif', 'Enlarge', 'width=450, height=237,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b> 返回至 Creo Simulate。在“消息”(Message) 对话框中单击<b>“否”(No)</b>。
+                  </p>
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">9. 单击<b>“文件”(File)</b><b> &gt; “管理会话”(Manage Session)</b><b> &gt; “拭除当前”(Erase Current)</b> 以关闭显示的窗口，并从内存中拭除模型。当提示您确认时，请单击<b>“是”(Yes)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_32" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_32&#34;, T3911_32)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

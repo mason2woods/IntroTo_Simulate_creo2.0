@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid21710_1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_39" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_39&#34;, T3911_39)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 了解线性失稳分析</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>执行线性失稳分析。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在本练习中，您将计算导致薄壁压缩结构稳定性失败的压缩力。此结构是圆形的且由钢构成。除了这些要求，还要关注失败的形状，它是否类似于柱或薄壁的局部失稳的失稳形状？仅支持该柱且假定材料为线性。</p>
+         <p>将使用细化的网格并且您将学习新的 AutoGEM 控制以生成所需质量的元素。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012542.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012623.gif"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Analysis\CompStrut</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png"> EULER_TRACTION_STRUT_SIMULATE.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 EULER_TRACTION_STRUT.PRT。</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“基准”(Datum) 组中单击<b>“点”(Point) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012982.gif">。“基准点”(Datum Point) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 在模型中，选择定义管内部直径的弧，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194937.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194937.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194937.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在“基准点”(Datum Point) 对话框中，选择刚刚在“参考”(References) 部分中选定的边。从“在其上”(On) 下拉菜单中选择<b>“中心”(Center)</b>。请注意，将在左列创建新点。
+                  </p>
+                  <p class="step_p1">5. 在左列，选择<b>“新建点”(New Point)</b>。
+                  </p>
+                  <p class="step_p1">6. 在模型中，为刚刚选择用于定义第二个点在弧管的另一端选择弧。</p>
+                  <p class="step_p1">7. 在“参考”(References) 部分中，根据需要从“在其上”(On) 下拉菜单中选择<b>“中心”(Center)</b>。请注意，将在左列创建新点。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">10. 从“连接”(Connections) 组中单击<b>“刚性连接”(Rigid Link) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011904.gif">。将出现“刚性连接定义”(Rigid Link Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 按住 CTRL 键并在模型中选择新创建的点和端平整曲面，如图所示。</p>
+                  <p class="step_p1">12. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194936.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194936.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194936.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">13. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">14. 从“连接”(Connections) 组中单击<b>“刚性连接”(Rigid Link) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011904.gif">。将出现“刚性连接定义”(Rigid Link Definition) 对话框。
+                  </p>
+                  <p class="step_p1">15. 按住 CTRL 键并在该结构的另一端选择 <b>PNT1</b> 及其相应的平整曲面。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">17. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">18. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">19. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">20. 在模型中，选择创建的第一个点。</p>
+                  <p class="step_p1">21. 在“平移”(Translation) 部分中，单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif"> 用于 Y 平移。
+                  </p>
+                  <p class="step_p1">22. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">23. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">24. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">25. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">26. 在模型中，选择创建的第二个点。</p>
+                  <p class="step_p1">27. 在“旋转”(Rotation) 部分中，单击<b>“固定的旋转”(Fixed Rotation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011798.gif"> 用于 Y 旋转。
+                  </p>
+                  <p class="step_p1">28. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">所有这些约束都是同一个约束集的一部分，因此，在系统上同时运行。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义压缩载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">4. 在模型中，选择定义的第一个点。</p>
+                  <p class="step_p1">5. 在“力”(Force) 部分的 Y 字段中键入 <b>-800000</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义 AutoGEM 控制并网格化模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在 AutoGEM 组中从“控制”(Controls) 下拉菜单中选择<b>“硬点”(Hard Point) </b><img alt="Graphic" src="graphics/en_zh-cn_0000195074.gif">。“硬点控制”(Hard Point Control) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 在“参考”(References) 部分中，选择<b>“阵列”(Pattern)</b>。
+                  </p>
+                  <p class="step_p1">4. 在模型树中，展开<b>“阵列 1 的阵列 2”(Pattern 2 of Pattern 1)</b>。将列出 84 点阵列。
+                  </p>
+                  <p class="step_p1">5. 选择<b>“基准点的阵列 1”(Pattern 1 of Datum Point)</b>。
+                  </p>
+                  <p class="step_p1">6. 按住 SHIFT 键并选择<b>“基准点的阵列 84”(Pattern 84 of Datum Point)</b> 以选择模型中的所有阵列点。所有的点阵列将出现在“硬点控制”(Hard Point Control) 对话框的选择查询范围中。
+                  </p>
+                  <p class="step_p1">7. 在“硬点控制”(Hard Point Control) 对话框中，单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">9. 从 AutoGEM 组中的“控制”(Controls) 下拉菜单中选择<b>“薄实体”(Thin Solid)</b><b> &gt; “检测薄实体”(Detect Thin Solids)</b>。“自动检测薄实体”(Auto Detect Thin Solids) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">10. 在“特征厚度”(Characteristic Thickness) 字段中键入 <b>4</b>。
+                  </p>
+                  <p class="step_p1">11. 单击<b>“开始”(Start)</b>。“自动检测薄实体”(Auto Detect Thin Solids) 对话框随即关闭。
+                  </p>
+                  <p class="step_p1">12. 在模型树中，展开<b>“AutoGEM 控制”(AutoGEM Controls)</b>。请注意正在定义的 <b>AutoGEMControl2</b>。
+                  </p>
+                  <p class="step_p1">13. 右键单击 <b>AutoGEMControl2</b>，然后选择<b>“编辑定义”(Edit Definition)</b>。“薄实体控制”(Thin Solid Control) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">14. 请注意正在匹配的曲面对。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">16. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">17. 单击<b>“创建”(Create)</b>。
+                  </p>
+                  <p class="step_p1">18. 检查生成的网格。单击<b>“关闭”(Close)</b> 以关闭所有对话框。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义并运行静态分析和预应力分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 右键单击 <b>euler_strut_compression_force</b>，然后选择<b>“编辑”(Edit)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 校验或完成以下操作：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>euler_strut_compression_force</b>。
+                        </li>
+                        <li>选择显示在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 右键单击 <b>euler_strut_buckling</b>，然后选择<b>“编辑”(Edit)</b>。“失稳分析定义”(Buckling Analysis Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">7. 校验或完成以下操作：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>euler_strut_buckling</b>。
+                        </li>
+                        <li>单击<b>“前一分析”(Previous Analysis)</b> 选项卡，然后选择<b>“使用来自前一设计研究的静态分析结果”(Use static analysis results from previous design study)</b>。
+                        </li>
+                        <li>校验 <b>LoadSet1</b> 已被选中。
+                        </li>
+                        <li>在“失稳模式数”(Number of Buckling Modes) 字段中键入 <b>8</b>。
+                        </li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 右键单击 <b>euler_strut_buckling_MP</b>，然后选择<b>“编辑”(Edit)</b>。“失稳分析定义”(Buckling Analysis Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">10. 校验或完成以下操作：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>euler_strut_buckling_MP</b>。
+                        </li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“收敛百分比”(Percent Convergence) 字段中键入 <b>5</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b>。
+                        </li>
+                        <li>在“收敛于”(Converge on) 部分中，选择<b>“BLF、局部位移和局部应变能”(BLF, Local Displacement and Local Strain Energy)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">11. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">13. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>euler_strut_compression_force</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">15. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。仔细检查在汇总文件中显示的信息。标识最大 von Mises 和 Y 轴应力 (载荷方向)。
+                  </p>
+                  <p class="step_p1">16. 关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 窗口。</p>
+                  <p class="step_p1">17. 运行剩余的两个失稳分析。将输出目录写入同一位置，当前工作目录。</p>
+                  <p class="step_p1">18. 仔细检查在汇总文件中显示的信息。相对于多通道自适应算法使用单通道自适应算法时，请注意失稳载荷因子 (BLF) 的值。</p>
+                  <p class="step_p1">19. 完成两个研究后，关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 创建静态分析的条纹图。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 窗口中选择 <b>euler_strut_compression_force</b>。
+                  </p>
+                  <p class="step_p1">2. 单击<b>“审阅结果”(Review Results) </b><img alt="Graphic" src="graphics/en_zh-cn_0000176938.gif">。将出现“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 创建最大位移的结果窗口，并检查显示的结果。放大变形的形状并打开透明叠加。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194935.gif', 'Enlarge', 'width=450, height=284,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194935.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194935.gif', 'Enlarge', 'width=450, height=284,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 创建 von Mises 应力的结果窗口，并检查所显示的结果。放大变形的形状并打开透明叠加。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194934.gif', 'Enlarge', 'width=450, height=281,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194934.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194934.gif', 'Enlarge', 'width=450, height=281,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 为轴向应力、沿 Y 轴的应力创建结果窗口并检查显示的结果。放大变形的形状并打开透明叠加。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">请注意，虽然最大 von Mises 应力大约为 850 MPa，但从图例可知，结构只能承受 677 MPa 的应力。应力主要为压缩应力，因此，将在 Y 轴应力条纹图中报告相似的值。记录 677 MPa 应力。 </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194933.gif', 'Enlarge', 'width=450, height=311,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194933.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194933.gif', 'Enlarge', 'width=450, height=311,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 创建 P 级 (求解器所达到的多项式) 的结果窗口，并检查显示的结果。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">从 P 级图中，可轻松地发现刚性连接的连接使约束上存在一些应力奇点。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194932.gif', 'Enlarge', 'width=450, height=284,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194932.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194932.gif', 'Enlarge', 'width=450, height=284,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b> 返回至 Creo Simulate。在“消息”(Message) 对话框中单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 创建失稳分析的条纹图。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 窗口中选择 <b>euler_strut_buckling_MP</b>。
+                  </p>
+                  <p class="step_p1">2. 单击<b>“审阅结果”(Review Results) </b><img alt="Graphic" src="graphics/en_zh-cn_0000176938.gif">。将出现“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">请注意，第一个 BLF 为 1.39。这表示在 677*1.39 = 941 MPa 的压缩应力下结构将收缩，并且等效的失稳载荷为 1112 MN。失稳理论几乎无效，因为选定钢等级的屈服强度为 950 MPa。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Mode_1</b>。
+                        </li>
+                        <li>在“标题”(Title) 字段中键入 <b>BLF Mode 1</b>。
+                        </li>
+                        <li>在“研究选择”(Study Selection) 部分，从列表中选择“模式 1”(Mode 1)。</li>
+                        <li>单击<b>“数量”(Quantity)</b> 选项卡。
+                        </li>
+                        <li>从下拉菜单中选择<b>“位移”(Displacement)</b>。
+                        </li>
+                        <li>从“单位”(units) 下拉菜单中选择 <b>mm</b>。
+                        </li>
+                        <li>从“分量”(Component) 下拉菜单中选择<b>“模”(Magnitude)</b>。
+                        </li>
+                        <li>单击<b>“显示选项”(Display Options)</b> 选项卡。选择<b>“已变形”(Deformed)</b> 和<b>“透明叠加”(Transparent Overlay)</b>。
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 单击<b>“确定并显示”(OK and Show)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194931.gif', 'Enlarge', 'width=450, height=225,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194931.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194931.gif', 'Enlarge', 'width=450, height=225,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 创建模式 2 的结果窗口并检查显示的结果。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194930.gif', 'Enlarge', 'width=450, height=243,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194930.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194930.gif', 'Enlarge', 'width=450, height=243,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 创建模式 3 的结果窗口并检查显示的结果。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194929.gif', 'Enlarge', 'width=450, height=263,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194929.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194929.gif', 'Enlarge', 'width=450, height=263,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 创建模式 5 的结果窗口并检查显示的结果。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000194928.gif', 'Enlarge', 'width=450, height=231,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000194928.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000194928.gif', 'Enlarge', 'width=450, height=231,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b> 返回至 Creo Simulate。在“消息”(Message) 对话框中单击<b>“否”(No)</b>。
+                  </p>
+                  <p class="step_p1">9. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“文件”(File)</b><b> &gt; “管理会话”(Manage Session)</b><b> &gt; “拭除当前”(Erase Current)</b> 以关闭显示的窗口，并从内存中拭除模型。当提示您确认时，请单击<b>“是”(Yes)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_39" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_39&#34;, T3911_39)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

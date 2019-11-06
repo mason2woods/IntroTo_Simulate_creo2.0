@@ -1,0 +1,425 @@
+/* DIVs beneath a collapsed node should not display. Use important to make this rule override.
+DIVs beneath an expanded node should display.*/
+DIV.cnode DIV, .hidden, DIV.cnavbucket DIV  {
+	display : none!important;
+}
+
+DIV.xnode DIV  {
+	display : block;
+}
+
+NOBR.cnode NOBR, .hidden, NOBR.cnavbucket NOBR  {
+	display : none!important;
+}
+
+NOBR.xnode NOBR  {
+	display : block;
+}
+
+NOBR  {
+	display : block;
+}
+
+/* Overall properties.
+Text is the class for the right hand reading area.
+Local is the class for the nav bar under the reading area.
+Nav is the class for the main navigation area.*/
+BODY.text  {
+	margin : 2pt;
+	margin-left : 8pt;
+	background : white;
+	font-size : small;
+}
+
+H1.title  {
+	font-size : x-large;
+	text-align : center;
+}
+
+.textloading  {
+	margin-top : 45%;
+	text-align : center;
+}
+
+BODY.local  {
+	background : #FFFFFF;
+}
+
+.localcreatedby {
+	color : #330066;
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size : xx-small;
+        text-align : right;
+}
+
+.localtoolbar {
+	background : #330066;
+}
+
+BODY.nav  {
+	background : #9999CD;
+	color : black;
+}
+
+DIV.navchoose  {
+	margin-top : 3pt;
+	margin-left : 3pt;
+}
+
+.nav HR  {
+	margin-bottom : 9pt;
+}
+
+.navchoose DIV  {
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin-top : 2pt;
+}
+
+.navchoose H4  {
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navtab A  {
+	color : #000066;
+}
+
+.navtab  {
+	margin-bottom : 2pt;
+	margin-left : 3pt;
+}
+
+.navtoc  {
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size : smaller;
+	margin-left : 3pt;
+}
+
+.navtoc SPAN  {
+	cursor : hand;
+}
+
+SPAN.navtree  {
+	font-family : Symbol;
+	width : 1.5em;
+}
+
+NOBR SPAN.navtree  {
+	font-family : Symbol;
+	width : 1.5em;
+}
+
+NOBR NOBR SPAN.navtree  {
+	font-family : Symbol;
+	width : 3em;
+}
+
+NOBR NOBR NOBR SPAN.navtree  {
+	font-family : Symbol;
+	width : 4.5em;
+}
+
+.navtoc A.navtree  {
+	color : #000066;
+}
+
+SPAN.navtreehover  {
+	color : red;
+	font-family : Symbol;
+	width : 1.5em;
+}
+
+A.navtreehover  {
+	color : red;
+	font-family : Symbol;
+}
+
+.navtoc DIV  {
+	margin-left : 0em;
+}
+
+.navtoc DIV DIV  {
+	margin-left : 1em;
+}
+
+.navtoc NOBR  {
+	margin-left : 0em;
+}
+
+.navtoc NOBR NOBR  {
+	margin-left : 1em;
+}
+
+.navtoc .hover  {
+	color : red;
+	text-decoration : underline;
+}
+
+.navindex .hover  {
+	color : red;
+}
+
+.navtoc A:link, .navtoc A:visited  {
+	color : black;
+	text-decoration : underline;
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navselect  {
+	margin-top : 3pt;
+	margin-right : 3pt;
+	margin-bottom : 3pt;
+	margin-left : 3pt;
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size : smaller;
+	cursor : hand;
+}
+
+.navindex  {
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size : smaller;
+	margin-left : 3pt;
+}
+
+.navbucket  {
+	margin-top : 5pt;
+	margin-bottom : 3pt;
+	text-decoration : underline;
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	cursor : hand;
+	color : black;
+}
+
+.cnavbucket  {
+	margin-top : 5pt;
+	margin-bottom : 3pt;
+	text-decoration : underline;
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	cursor : hand;
+	color : black;
+}
+
+.navindex1  {
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin-top : 1pt;
+	margin-bottom : 1pt;
+	margin-left : 3pt;
+	text-decoration : none;
+	cursor : hand;
+	color : black;
+}
+
+.navindex2  {
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin-top : 1pt;
+	margin-bottom : 1pt;
+	margin-left : 8pt;
+	text-decoration : none;
+	cursor : hand;
+	color : black;
+}
+
+.navindex3  {
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin-top : 1pt;
+	margin-bottom : 1pt;
+	margin-left : 13pt;
+	text-decoration : none;
+	cursor : hand;
+	color : black;
+}
+
+.navtts  {
+	margin-top : 3pt;
+	margin-left : 3pt;
+	margin-bottom : 3pt;
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navttsenabled  {
+	margin : 0pt;
+	cursor : hand;
+}
+
+.localprev  {
+	margin : 0pt;
+	padding : 0pt;
+	display : inline;
+	cursor : hand;
+}
+
+.localnext  {
+	margin : 0pt;
+	padding : 0pt;
+	display : inline;
+	cursor : hand;
+}
+
+.localfeedback  {
+	margin : 0pt;
+	padding : 0pt;
+	display : inline;
+	cursor : hand;
+}
+
+A.localtext  {
+	color : #000066;
+}
+
+.text  {
+	color : black;
+	font-family : Tahoma, Arial, Verdana, Helvetica, sans-serif;
+}
+
+.enter  {
+	color : black;
+	font-family : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+BODY.enter  {
+	background-color : silver;
+}
+
+.enter_selection  {
+	background : silver;
+}
+
+.enter DIV  {
+	padding : 3pt;
+	margin : 3pt;
+	height : 350pt;
+	width : 320pt;
+	position : absolute;
+	left : 10pt;
+}
+
+.comment  {
+	color : black;
+	background : silver;
+	font-family : Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+H2.SECT2  {
+	color : #FFFFFF;
+	font-size : medium;
+	padding-left : 2px;
+	padding-top : 2px;
+	padding-bottom : 2px;
+	padding-right : 200px;
+}
+
+H1.SECT1  {
+	font-size : medium;
+}
+
+DT.local, DT.nav  {
+	font-weight : bold;
+}
+
+H3.SECT3  {
+	color : #FFFFFF;
+	font-size : small;
+	padding-left : 2px;
+	padding-top : 2px;
+	padding-bottom : 2px;
+	padding-right : 200px;
+}
+
+H1  {
+	font-family : Tahoma, Verdana, Helvetica, sans-serif;
+	font-size : 16pt;
+	color : black;
+	font-weight : bold;
+}
+
+
+.footnote {
+	border: solid 1px black;
+	overflow: auto;
+	background: #FFFFCC;
+	font-family: sans-serif;
+	font-size: .8em;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 2px;
+	width: 300px;
+	display:none;
+	z-index: 10000;
+}
+
+.footnote p {
+	margin: 0px;
+}
+
+.footnoteref {
+	font-size: .7em;
+	vertical-align: top;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* This is just for kicks */
+#dropshadow {
+	background-color: gray;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	z-index: 1;
+	font-size: .01em;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+/*added for desktop html*/ 
+.header a {
+	text-decoration:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#666666;
+}
+.header a:hover{
+	text-decoration:underline;
+}
+
+div#buttons a {
+	display:block;
+	text-align:left;
+	margin-left:1em;	margin-bottom:5px;	
+
+
+	width: 100%;
+	text-decoration:none;
+	background-color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#585858;
+	}
+
+div#clearchecks a {
+	display:block;
+	text-align:center;
+	width: 12em;
+	background-color:#849EB4;
+	text-decoration:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	border-left:#44627C solid thin;
+	border-top:#44627C solid thin;
+	border-bottom:#44627C solid thin;
+	border-right:#44627C solid thin;
+	color:#FFFFFF;
+	margin-bottom:2em;	
+}
+td#exetd a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	
+}
+
+
+

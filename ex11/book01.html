@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20258_ReviewInterfaces1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_11" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_11&#34;, T3911_11)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 审阅界面</h2><br><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Interfaces</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002490.png">WELDED_JOINT_SIMULATE.ASM 
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 WELDED_JOINT.ASM</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 在模型中审阅温度载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在模型树中，展开<b>载荷/约束</b>和<b>载荷集 LoadSet1</b>。
+                  </p>
+                  <p class="step_p1">2. 右键单击 <b>Load1</b>，然后选择<b>“编辑定义”(Edit Definition)</b>。将出现“结构温度载荷”(Structural Temperature Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 审阅载荷信息，然后单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义合力测量。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“测量”(Measures) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011918.gif">。将出现“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 完成“测量定义”(Measure Definition) 对话框，如图所示。在“空间评估”(Spatial Evaluation) 部分中选择<b>“曲面”(Surfaces)</b> 后，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif"> 并在模型中选择<b>“曲面:F8(REVOLVE_1):STAMP”(Surf:F8(REVOLVE_1):STAMP)</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000155165.gif" width="226"></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义自由界面连接。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“连接”(Connections) 组中单击<b>“界面”(Interface) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011845.gif">。将出现“界面定义”(Interface Definition) 对话框。
+                  </p>
+                  <p class="step_p1">3. 完成对话框，如图所示。对于这两个曲面参考，以任何顺序选择 PLATE.PRT 的顶部曲面和 STAMP.PRT 的底部曲面。</p>
+                  <p class="step_p1">4. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000155164.gif" width="228"></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 网格化模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在 AutoGEM 组中从“控制类型”(Control Types) 下拉菜单中选择<b>“最大元素尺寸”(Maximum Element Size) </b><img alt="Graphic" src="graphics/en_zh-cn_0000155110.gif">。将出现“最大元素尺寸控制”(Maximum Element Size Control) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在“参考”(References) 部分中，从下拉菜单中选择<b>“分量”(Components)</b>。
+                  </p>
+                  <p class="step_p1">4. 在模型树中，按住 CTRL 键并选择 PLATE.PRT 和 STAMP.PRT。</p>
+                  <p class="step_p1">5. 在“元素尺寸”(Element Size) 字段中键入 <b>15</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">7. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“创建”(Create)</b>。网格已被创建，如图所示。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000155163.gif', 'Enlarge', 'width=444, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000155163.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000155163.gif', 'Enlarge', 'width=444, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 检查网格并注意没有公用节点在所包含零件的共享自由界面连接的曲面上被创建。在其他地方有公用节点。</p>
+                  <p class="step_p1">10. 在所有对话框中单击<b>“关闭”(Close)</b> 以返回到 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">11. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">12. 提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 在“名称”(Name) 字段中键入 <b>Welded_Joint_Free</b>。保持所有其他默认设置。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">6. 选择刚定义的“分析”(Analysis)，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。
+                  </p>
+                  <p class="step_p1">7. 单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 以监视分析进度。
+                  </p>
+                  <p class="step_p1">9. 检查显示在“运行状况”(Run Status) 对话框中的信息。标识最大位移模。同样，在摘要文件中标识已定义的合成测量 Reaction_Y。</p>
+                  <p class="step_p1">10. 在“运行状况”(Run Status) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">11. 在“诊断”(Diagnostics) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 创建结果窗口并检查结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 单击<b>“结果”(Results)</b><b> &gt; “定义结果窗口”(Define Result Window)</b>。将出现“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+                  <p class="step_p1">2. 完成对话框，如图所示。</p>
+                  <p class="step_p1">3. 单击<b>“确定并显示”(OK and Show)</b>。
+                  </p>
+                  <div class="img"><img height="442" width="340" alt="Graphic" src="graphics/en_zh-cn_0000155162.gif"  ></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 审阅出图。检查变形并注意板被焊接连在一起。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000155161.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000155161.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000155161.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b>。
+                  </p>
+                  <p class="step_p1">6. 在系统提示您保存当前结果窗口时，单击<b>“否”(No)</b>。
+                  </p>
+                  <p class="step_p1">7. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“文件”(File)</b><b> &gt; “管理会话”(Manage Session)</b><b> &gt; “拭除当前”(Erase Current)</b>。
+                  </p>
+                  <p class="step_p1">9. 单击<b>“确定”(OK)</b> 以响应“拭除确认”(Erase Confirm) 提示。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_11" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_11&#34;, T3911_11)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

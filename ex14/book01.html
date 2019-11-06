@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20403_1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_14" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_14&#34;, T3911_14)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 使用测量</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>准备一个用于测量规格的模型。</li>
+            <li>创建合成和力矩测量。</li>
+            <li>创建位移测量。</li>
+            <li>创建已计算的测量。</li>
+            <li>创建应力评估测量。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在本练习中，您将检查 Creo Simulate 中某些可用于对模型中特定位置的对应力、变形或或其他数量进行用户定义的评估的功能。它们可能并不是整个模型中的最大或最小数量，但却位于特定位置。</p>
+         <p>在本练习中，您将检查受到单位载荷的塑柄夹。您将对发现支架上的反作用力、沿着修剪长度的剪切力和力矩以及模型中临界区域的应力感兴趣。此外，您还会对发现模型在加载时所存储的弹簧力和弹簧能量感兴趣。为完成此操作，需要利用 Creo Simulate 中的测量功能。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012542.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012623.gif"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Measures</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">MEASURE_CLIP_B.PRT
+         </p>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 调查模型属性。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 单击<b>“文件”(File)</b><b> &gt; “准备”(Prepare)</b><b> &gt; “模型属性”(Model Properties)</b>。将出现“模型属性”(Model Properties) 对话框。
+                  </p>
+                  <p class="step_p1">2. 审阅模型中所使用的单位。要关闭“模型属性”(Model Properties) 对话框，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">3. 在模型树中，展开<b>“材料”(Materials)</b>。右键单击 <b>THERMOPLAST_LIGHTGREY_RAL_7035</b>，然后选择<b>“编辑定义”(Edit Definition)</b>。将出现“材料定义”(Material Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 查看杨氏模量 (E) 值和泊松比值。单击<b>“确定”(Ok)</b> 以关闭“材料定义”(Material Definition) 对话框。
+                  </p>
+                  <p class="step_p1">5. 审阅模型中已定义的单位曲面载荷，以使夹子弯曲。定义约束以模拟正在固定夹子的螺栓。螺栓实际上并未在模型中进行定义；相反地，模型中的约束将模拟螺栓孔曲面未变形的情况。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 通过创建体积块区域模拟特征和基准点，为测量规格准备模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“区域”(Regions) 组的“体积块区域”(Volume Region) 下拉菜单中选择<b>“拉伸”(Extrude) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011799.gif">。“拉伸”(Extrude) 操控板随即出现。
+                  </p>
+                  <p class="step_p1">3. 选择<b>“放置”(Placement)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“定义”(Define)</b>。将出现“草绘”(Sketch) 对话框。
+                  </p>
+                  <p class="step_p1">5. 在模型中选择显示的曲面。</p>
+                  <p class="step_p1">6. 单击<b>“草绘”(Sketch)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304615.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304615.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304615.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“草绘”(Sketch)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 在“设置”(Setup) 组中单击<b>“草绘视图”(Sketch View) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012361.gif"> 以定向草绘平面。
+                  </p>
+                  <p class="step_p1">9. 在“设置”(Setup) 组中单击<b>“参考”(References) </b><img alt="Graphic" src="graphics/en_zh-cn_0000010906.gif">。“参考”(References) 对话框随即显示。
+                  </p>
+                  <p class="step_p1">10. 在模型上，为如图所示的草绘几何选择参考。删除所列出的任何未使用的参考。</p>
+                  <p class="step_p1">11. 在“参考”(References) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304614.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304614.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304614.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 从“草绘”(Sketching) 组的“矩形”(Rectangle) 类型下拉菜单的中选择<b>“拐角矩形”(Corner Rectangle) </b><img alt="Graphic" src="graphics/en_zh-cn_0000271617.gif">。
+                  </p>
+                  <p class="step_p1">13. 草绘矩形和尺寸，如图所示。</p>
+                  <p class="step_p1">14. 单击<b>“确定”(OK) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013516.gif"> 以完成草绘并返回到“拉伸”(Extrude) 操控板。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304613.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304613.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304613.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 从深度下拉菜单中选择<b>“穿透”(Through All) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013844.gif">。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“应用保存更改”(Apply-Save Changes) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012476.gif">。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">17. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">18. 在“基准”(Datum) 组中单击<b>“点”(Point) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012982.gif">。“基准点”(Datum Point) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">19. 在模型中选择显示的曲面。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top"> 您在模型中创建的点不必为硬点 (有限元节点)，但此点必须驻留在几何上。您也可以在几何的内部放置测量，但那些测量必须在诸如“体积块区域”的边之类的参考上创建。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304612.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304612.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304612.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">20. 启用<b>“平面显示”(Plane Display) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012325.gif">。
+                  </p>
+                  <p class="step_p1">21. 在“基准点”(Datum Point) 对话框中，单击“偏移参考”(Offset References) 字段。</p>
+                  <p class="step_p1">22. 按住 CTRL 键并选择基准平面 <b>Front_XY</b> 和如图所示的边。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304611.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304611.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304611.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">23. 在“基准点”(Datum Point) 对话框的“偏移参考”(Offset references) 部分中，为“前”偏移参考键入 <b>0.0</b>，为“边”偏移参考键入 <b>1.50</b>。
+                  </p>
+                  <p class="step_p1">24. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 创建合成和力矩测量。
+               </h4>
+               <div class="note" style="margin-bottom: 5pt">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="border: 0; width: 95%; cellSpacing: 0;  cellPadding: 0; align: center" width="95%">
+                     <tbody>
+                        <tr>
+                           <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                           <td colspan="2" height="1" valign="top">
+                              <hr align="right" size="1" style="color: #567a9a;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td bgcolor="#ffffff" width="35"></td>
+                           <td valign="top" width="32">
+                              <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                           </td>
+                           <td valign="top">这些测量会评估约束的反作用力。为每个反应方向创建四种测量。</td>
+                        </tr>
+                        <tr>
+                           <td bgcolor="#ffffff" width="35"></td>
+                           <td colspan="2" valign="top">
+                              <hr align="right" size="1" style="color: #567a9a">
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“测量”(Measures) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011918.gif">。将出现“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成“测量定义”(Measure Definition) 对话框，如图所示。在“空间评估”(Spatial Evaluation) 部分中，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif">，然后在模型树中选择 <b>Constraint1</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。不要关闭“测量”(Measure) 对话框。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000304610.gif" width="221"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 使用先前的步骤，为其余三个约束中的每个约束都创建 X 力测量。</p>
+                  <p class="step_p1">7. 使用先前的步骤，为所有四个约束创建 Y 和 Z 方向力测量。保持相同的命名惯例。共有 12 种测量。不要关闭“测量”(Measure) 对话框。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">可利用“测量”(Measure) 对话框中的<b>“复制”(Copy)</b> 来创建这些测量。
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304609.gif', 'Enlarge', 'width=459, height=388,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304609.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304609.gif', 'Enlarge', 'width=459, height=388,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在“测量”(Measures) 对话框中，单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">9. 完成“测量定义”(Measure Definition) 对话框，如图所示。在“空间评估”(Spatial Evaluation) 部分中选择<b>“曲面”(Surfaces)</b> 之后，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif"> 并选择通过创建体积块区域所生成的曲面，如模型中所示。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000304608.gif" width="200"></div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304607.gif', 'Enlarge', 'width=446, height=345,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304607.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304607.gif', 'Enlarge', 'width=446, height=345,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 使用先前的步骤，在相同位置创建 X 力测量。不要关闭“测量”(Measure) 对话框。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在距离支架偏移 8mm 的位置处定义一个测量合成量。在“测量”(Measure) 对话框中，单击<b>“新建”(New)</b>。
+                  </p>
+                  <p class="step_p1">13. 完成“测量定义”(Measure Definition) 对话框，如图所示。在“空间评估”(Spatial Evaluation) 部分中选择<b>“曲面”(Surfaces)</b> 之后，完成下列操作： 
+                  </p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>像先前步骤那样，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif"> 以选择通过创建体积块区域所生成的曲面。
+                        </li>
+                        <li>在“点”(Point) 部分，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif"> 以选择点，如图所示。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">14. 单击<b>“确定”(OK)</b>。不要关闭“测量”(Measure) 对话框。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000304646.gif" width="220"></div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304645.gif', 'Enlarge', 'width=445, height=335,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304645.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304645.gif', 'Enlarge', 'width=445, height=335,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 使用先前的步骤，在相同位置创建另一个力矩测量，只是将一个不同的点用于“空间评估”，如图所示。不要关闭“测量”(Measure) 对话框。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304644.gif', 'Enlarge', 'width=446, height=338,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304644.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304644.gif', 'Enlarge', 'width=446, height=338,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 创建位移测量。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“测量”(Measures) 对话框中，单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">2. 如图所示完成字段。所选的点是创建于先前任务中的基准点。</p>
+                  <p class="step_p1">3. 单击<b>“确定”(OK)</b>。不要关闭“测量”(Measure) 对话框。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000155158.gif" width="206"></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 创建计算的测量。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“测量”(Measures) 对话框中，单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">2. 完成对话框，如图所示。</p>
+                  <p class="step_p1">3. 单击<b>“确定”(OK)</b>。不要关闭“测量”(Measure) 对话框。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000155157.gif" width="245"></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 创建应力评估测量。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“测量”(Measures) 对话框中，单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">2. 完成“测量定义”(Measure Definition) 对话框，如图所示。在“空间评估”(Spatial Evaluation) 部分中选择<b>“整个选定几何”(Over Selected Geometry)</b> 之后，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif"> 并选择通过创建体积块区域所生成的曲面，如模型中所示。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“确定”(OK)</b>。不要关闭“测量”(Measure) 对话框。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000304643.gif" width="246"></div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304642.gif', 'Enlarge', 'width=447, height=339,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304642.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304642.gif', 'Enlarge', 'width=447, height=339,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 使用先前的步骤，创建另一个应力评估测量。评估刚刚选定的圆角对面的圆角上的最小主应力。</p>
+                  <p class="step_p1">5. 在“测量”(Measures) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 7.</b> 调查作为静态分析输出的测量。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 选择已定义的研究。单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 以监视运行。
+                  </p>
+                  <p class="step_p1">6. 在“运行状况”(Run Status) 对话框中，标识 Creo Simulate 所报告的默认测量的列表 (最小或最大数量) 和已定义测量的列表。因为载荷不会随着时间或频率改变，所以仅报告您所创建的测量的单个值。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">测量也可用作解决方案能够收敛的数量。在任意“多通道自适应分析”(Multi-Pass Adaptive Analyses) 对话框中，选择单选按钮“测量”(Measures) 并选择任意默认的或用户定义的测量。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">7. 在“运行状况”(Run Status) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">8. 在“诊断”(Diagnostics) 窗口中单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">9. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_14" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_14&#34;, T3911_14)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

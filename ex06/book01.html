@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid19992_DefiningForcesMomentsAndPressure1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_06" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_06&#34;, T3911_06)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 定义力、力矩和压力</h2><br><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\DefineForce</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">TRACTION_SHEAVE_SHAFT_SIMULATE.PRT 
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 TRACTION_SHEAVE_SHAFT.PRT</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 在模型中定义约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“连接”(Connections) 组中单击<b>“受力连接”(Weighted Link) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011982.gif">。将出现“受力连接定义”(Weighted Link Definition) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“独立侧”(Independent Side) 下拉列表中选择<b>“曲面”(Surfaces)</b>。选择模型上的圆柱曲面 <b>Surf:F30</b>，如图所示。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151999.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151999.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151999.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 启用<b>“点显示”(Point Display) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012324.gif">。在“受力连接定义”(Weighted Link Definition) 对话框中的“从属侧”(Dependent Side) 部分，在“点”(Point) 字段中单击。在模型上选择 <b>PNT8</b>，如图所示。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">6. 在轴的另一端重复此过程以创建第二个受力连接。选择 <b>PNT9</b> 作为“从属侧”(Dependent Side) 点。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151998.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151998.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151998.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在“理想化”(Idealizations) 组中单击<b>“弹簧”(Spring) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011942.gif">。将出现“弹簧定义”(Spring Definition) 对话框。
+                  </p>
+                  <p class="step_p1">8. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“类型”(Type) 下拉列表中选择<b>“基础”(To Ground)</b>。
+                        </li>
+                        <li>在“参考”(References) 部分中选择<b>“单一”(Single)</b>。
+                        </li>
+                        <li>在模型上选择 <b>PNT8</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">9. 在“属性”(Properties) 部分中，单击<b>“更多”(More)</b>。将出现“弹簧属性”(Spring Properties) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">10. 单击<b>“新建”(New)</b>。将出现“弹簧属性定义”(Spring Property Definition) 对话框。
+                  </p>
+                  <p class="step_p1">11. 完成“弹簧属性定义”(Spring Property Definition) 对话框，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151997.gif', 'Enlarge', 'width=595, height=468,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151997.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151997.gif', 'Enlarge', 'width=595, height=468,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在“弹簧属性定义”(Spring Property Definition) 对话框中，单击<b>“确定”(OK)</b>。 
+                  </p>
+                  <p class="step_p1">13. 在“弹簧属性”(Spring Properties) 对话框中，单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">14. 在“弹簧定义”(Spring Definition) 对话框中，单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">15. 在轴的另一端为 PNT9 定义第二个弹簧元素“接地”(To Ground)。如图所示完成“弹簧属性定义”(Spring Property Definition) 对话框并单击<b>“确定”(OK)</b> 以返回到“弹簧属性”(Spring Properties) 对话框。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“确定”(OK)</b> 关闭“弹簧属性”(Spring Properties) 和“弹簧定义”(Spring Definition) 对话框，并完成弹簧定义。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151996.gif', 'Enlarge', 'width=595, height=468,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151996.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151996.gif', 'Enlarge', 'width=595, height=468,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义模型载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在“集的成员”(Member of Set) 部分中，单击<b>“新建”(New)</b>。将出现“载荷集定义”(Load Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 在“名称”(Name) 字段中键入 <b>Belt_Preload</b>。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">5. 选择模型上的弯曲曲面，如图所示。一个曲面应显示在选择查询范围中。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151995.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151995.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151995.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 在“力/力矩载荷”(Force/Moment Load) 对话框中，在“属性”(Properties) 部分中选择<b>“选定”(Selected)</b>。
+                  </p>
+                  <p class="step_p1">7. 在模型树中，展开<b>“模拟特征”(Simulation Features)</b>，然后选择 <b>CS1</b>。
+                  </p>
+                  <p class="step_p1">8. 从“分布”(Distribution) 下拉列表中选择<b>“单位面积上的力”(Force Per Unit Area)</b>。
+                  </p>
+                  <p class="step_p1">9. 在“力”(Force) 部分中，在 R 字段中键入 <b>-23.8095</b>。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“预览”(Preview)</b> 以查看载荷。
+                  </p>
+                  <p class="step_p1">11. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">13. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">14. 在“集的成员”(Member of Set) 部分中，单击<b>“新建”(New)</b>。将出现“载荷集定义”(Load Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">15. 在“名称”(Name) 字段中键入 <b>Torque</b>。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">16. 选择模型上的弯曲曲面，如图所示。两个曲面应显示在选择查询范围中。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151994.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151994.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151994.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">17. 在“力/力矩载荷”(Force/Moment Load) 对话框中，在“属性”(Properties) 部分中选择<b>“高级”(Advanced)</b>。
+                  </p>
+                  <p class="step_p1">18. 从“分布”(Distribution) 下拉列表中选择<b>“点总载荷”(Total Load at Point)</b>。在模型中，选择<b>PNT2</b>。
+                  </p>
+                  <p class="step_p1">19. 在“力矩”(Moment) 部分中，在 Z 字段中键入 <b>-50000</b>。
+                  </p>
+                  <p class="step_p1">20. 单击<b>“预览”(Preview)</b> 以查看载荷。
+                  </p>
+                  <p class="step_p1">21. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">22. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">23. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">24. 在“集的成员”(Member of Set) 部分中，从下拉列表中选择<b>“扭矩”(Torque)</b>。
+                  </p>
+                  <p class="step_p1">25. 选择模型上的弯曲曲面，如图所示。一个曲面应显示在选择查询范围中。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151993.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151993.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151993.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">26. 在“力/力矩载荷”(Force/Moment Load) 对话框中，在“属性”(Properties) 部分中选择<b>“选定”(Selected)</b>。
+                  </p>
+                  <p class="step_p1">27. 在模型树中，选择 <b>CS1</b>。
+                  </p>
+                  <p class="step_p1">28. 从“分布”(Distribution) 下拉列表中选择<b>“单位面积上的力”(Force Per Unit Area)</b>。
+                  </p>
+                  <p class="step_p1">29. 在“力”(Force) 部分中，在 Theta 字段中键入 <b>8.6614935</b>。
+                  </p>
+                  <p class="step_p1">30. 单击<b>“预览”(Preview)</b> 以查看载荷。
+                  </p>
+                  <p class="step_p1">31. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">32. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">33. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">34. 在“集的成员”(Member of Set) 部分中，单击<b>“新建”(New)</b>。将出现“载荷集定义”(Load Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">35. 在“名称”(Name) 字段中键入 <b>Belt_addition_p_from_T</b>。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">36. 选择模型上的弯曲曲面，如图所示。一个曲面应显示在选择查询范围中。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000151992.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000151992.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000151992.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">37. 在“力/力矩载荷”(Force/Moment Load) 对话框中，在“属性”(Properties) 部分中选择<b>“选定”(Selected)</b>。
+                  </p>
+                  <p class="step_p1">38. 在模型树中，选择 <b>CS1</b>。
+                  </p>
+                  <p class="step_p1">39. 从“分布”(Distribution) 下拉列表中选择<b>“单位面积上的力”(Force Per Unit Area)</b>。
+                  </p>
+                  <p class="step_p1">40. 在“空间变化”(Spacial Variation) 下拉列表中选择<b>“在整个图元上插值”(Interpolated Over Entity)</b>。
+                  </p>
+                  <p class="step_p1">41. 按住 CTRL 键并在模型上选择点 <b>PNT3</b> 和 <b>PNT4</b>。
+                  </p>
+                  <p class="step_p1">42. 在“值”(Value) 列的第一个和第二个字段中分别键入 <b></b>0<b> 和 </b>27.2109<b>。</b></p>
+                  <p class="step_p1">43. 在“力”(Force) 部分的 R 字段中键入 <b>-1</b>。
+                  </p>
+                  <p class="step_p1">44. 单击<b>“预览”(Preview)</b> 以查看载荷。
+                  </p>
+                  <p class="step_p1">45. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中，键入 <b>Shaft</b>。
+                        </li>
+                        <li>在“载荷集/元件”(Load Set/Component) 部分中，只选择以下载荷集。
+                           <ul>
+                              <li>Belt_Preload</li>
+                              <li>Torque</li>
+                              <li>Belt_addition_p_from_T</li>
+                           </ul>
+                        </li>
+                        <li>所有其他设置保持默认值。</li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">7. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_06" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_06&#34;, T3911_06)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

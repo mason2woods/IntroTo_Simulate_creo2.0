@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid21393_1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_33" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_33&#34;, T3911_33)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 定义梁</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>创建梁理想化。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在这个练习中，您将使用 Creo Simulate 中的“梁理想化”来检查框架结构中的应力和变形。“梁”是元素的一种线性类型，使您能够在不牺牲模拟求解质量的情况下加快处理速度。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Beam</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">FRAMEWORK_CANTILEVER_SIMULATE.PRT 
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">请 Creo Parametric 用户打开 FRAMEWORK_CANTILEVER.PRT</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义梁理想化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“理想化”(Idealizations) 组中单击<b>“梁”(Beam) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011764.gif">。“梁定义”(Beam Definition) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 按住 CTRL 键并在模型中选择所显示的这两段。</p>
+                  <p class="normal">注意箭头的方向。这些箭头显示梁横截面方向的 X 轴正向。这些箭头必须指向同一个方向。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177507.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177507.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177507.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在“梁定义”(Beam Definition) 对话框的“材料”(Material) 部分，单击<b>“更多”(More)</b>。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">5. 校验 <b>ss.mtl</b> 已添加至模型。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">6. 选择<b>“开始”(Start)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">7. 在“梁截面”(Beam Section) 部分，单击<b>“更多”(More)</b>。“梁截面”(Beam Sections) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“新建”(New)</b>。“梁截面定义”(Beam Section Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">9. 在“名称”(Name) 字段中键入 <b>U-Channel</b></p>
+                  <p class="normal"> 。</p>
+                  <p class="step_p1">10. 选择<b>“截面”(Section)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">11. 从“类型”(Type) 下拉菜单中选择<b>“导槽”(Channel)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 完成如图所示的对话框其余部分。</p>
+                  <p class="step_p1">13. 单击<b>“确定”(OK)</b> 返回“梁截面”(Beam Sections) 对话框。
+                  </p>
+                  <p class="step_p1">14. 单击<b>“确定”(OK)</b> 返回“梁定义”(Beam Definition) 对话框。
+                  </p>
+                  <p class="step_p1">15. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000177506.gif" width="220"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">16. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">17. 在“理想化”(Idealizations) 组中单击<b>“梁”(Beam) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011764.gif">。“梁定义”(Beam Definition) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">18. 按住 CTRL 键并在模型中选择所显示的这三段。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177505.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177505.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177505.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">19. 注意箭头的方向。这些箭头显示梁横截面方向的 X 轴正向。这些箭头必须指向同一个方向。直接从模型具有反向流向的段上选择箭头并注意方向改变。现在，所有箭头都应指向如图所示的同一个方向。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177504.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177504.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177504.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">20. 在“梁定义”(Beam Definition) 对话框的“材料”(Material) 部分，单击<b>“更多”(More)</b>。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">21. 校验 <b>SS</b> 已显示在“模型”(Model) 列的“材料”(Material) 中。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">22. 在“属性”(Properties) 部分，在 Y 字段中键入 <b>0</b>，在 Z 字段中键入 <b>1</b>。
+                  </p>
+                  <p class="step_p1">23. 选择<b>“开始”(Start)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">24. 在“梁截面”(Beam Section) 部分，单击<b>“更多”(More)</b>。“梁截面”(Beam Sections) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">25. 校验 <b>U-Channel</b> 已被选定。
+                  </p>
+                  <p class="step_p1">26. 单击<b>“确定”(OK)</b> 返回“梁定义”(Beam Definition) 对话框。
+                  </p>
+                  <p class="step_p1">27. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">28. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">29. 在“理想化”(Idealizations) 组中单击<b>“梁”(Beam) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011764.gif">。“梁定义”(Beam Definition) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">30. 按住 CTRL 键并在模型中选择所显示的这五段。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177503.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177503.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177503.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">31. 在“梁定义”(Beam Definition) 对话框的“材料”(Materials) 部分，单击<b>“更多”(More)</b>。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">32. 校验 <b>SS</b> 已显示在“模型”(Model) 列的“材料”(Material) 中。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">33. 选择<b>“开始”(Start)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">34. 在“梁截面”(Beam Section) 部分，单击<b>“更多”(More)</b>。“梁截面”(Beam Sections) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">35. 单击<b>“新建”(New)</b>。“梁截面定义”(Beam Section Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">36. 在“名称”(Name) 字段中键入 <b>Cross</b>。
+                  </p>
+                  <p class="step_p1">37. 选择<b>“截面”(Section)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">38. 从“类型”(Type) 下拉菜单中选择<b>“草绘实体”(Sketched Solid)</b>。
+                  </p>
+                  <p class="step_p1">39. 单击<b>“草绘”(Sketch)</b>。阅读“信息”(Information) 对话框。
+                  </p>
+                  <p class="step_p1">40. 单击<b>“确定”(OK)</b>。“草绘器”(Sketcher) 窗口随即打开。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">您应该使用已有的草绘截面文件。可在 Creo Parametric 或 Creo Simulate 中草绘这个截面文件。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">41. 在功能区中，选择<b>“草绘”(Sketch)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">42. 在“获取数据”(Get Data) 组中单击<b>“文件系统”(File System) </b><img alt="Graphic" src="graphics/en_zh-cn_0000113000.gif">。“打开”(Open) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">43. 选择 <b>cross_section.sec</b>，然后单击<b>“打开”(Open)</b>。
+                  </p>
+                  <p class="step_p1">44. 单击活动窗口以放置草绘。草绘截面随即出现。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">45. 单击草绘的中心。不要松开鼠标按钮。拖动草绘，直到它捕捉到如图所示的现有坐标系参考。</p>
+                  <div class="img"><img alt="Graphic" src="graphics/en_zh-cn_0000177502.gif" width="253"></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">46. 在“缩放因子”(Scaling Factor) 字段中键入 <b>1.0</b>。
+                  </p>
+                  <p class="step_p1">47. 单击<b>“接受”(Accept) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012423.gif">。
+                  </p>
+                  <p class="step_p1">48. 在功能区中，选择<b>“草绘”(Sketch)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">49. 在“草绘”(Sketching) 组中单击<b>“点”(Point) </b><img alt="Graphic" src="graphics/en_zh-cn_0000010912.gif">。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">50. 在截面的每个角上放置点，如图所示。总共十二个点。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177501.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177501.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177501.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">51. 单击<b>“接受”(Accept) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012423.gif"> 以保存截面并返回至 Creo Simulate 窗口。
+                  </p>
+                  <p class="step_p1">52. 在“梁截面定义”(Beam Section Definition) 对话框中，单击<b>“确定”(OK)</b> 以返回至“梁截面”(Beam Sections) 对话框。
+                  </p>
+                  <p class="step_p1">53. 单击<b>“确定”(OK)</b> 返回“梁定义”(Beam Definition) 对话框。
+                  </p>
+                  <p class="step_p1">54. 在“梁释放”(Beam Release) 部分，单击<b>“更多”(More)</b>。“梁释放”(Beam Releases) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">55. 单击<b>“新建”(New)</b>。“梁释放”(Beam Release) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">56. 单击“旋转”(Rotation) 自由度：<b>Rx</b>、<b>Ry</b> 和 <b>Rz</b>。
+                  </p>
+                  <p class="step_p1">57. 单击<b>“确定”(OK)</b> 返回“梁释放”(Beam Releases) 对话框。
+                  </p>
+                  <p class="step_p1">58. 单击<b>“确定”(OK)</b> 返回“梁定义”(Beam Definition) 对话框。
+                  </p>
+                  <p class="step_p1">59. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义质量理想化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“理想化”(Idealizations) 组中单击<b>“质量”(Mass) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011842.gif">。“质量定义”(Mass Definition) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 在模型上，选择如图所示的弯曲段的顶点。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177500.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177500.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177500.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在“质量”(Mass) 字段中键入 <b>100</b>，并从下拉菜单中选择 <b>kg</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义重力载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“重力载荷”(Gravity Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011819.gif">。“重力载荷”(Gravity Load) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 在“加速度”(Acceleration) 部分的 Y 字段中键入 <b>-9810</b>。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在“参考”(References) 部分，从下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在模型中，选择所显示的这两点。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177499.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177499.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177499.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在“旋转”(Rotation) 部分，单击<b>“固定的旋转”(Fixed Rotation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011798.gif"> 用于 X 和 Y 的旋转。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Framework</b>。
+                        </li>
+                        <li>选择在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中显示的约束集和载荷集。</li>
+                        <li>选择<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b> 。
+                        </li>
+                        <li>在“限制”(Limits) 部分，在“收敛百分比”(Percent Convergence) 部分键入 <b>10</b>。
+                        </li>
+                        <li>在“收敛于”(Converge on) 部分，选择<b>“测量”(Measures)</b>。
+                        </li>
+                        <li>选择 <b>“列出测量”(List Measures) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011843.gif">。将出现“测量”(Measures) 对话框。
+                        </li>
+                        <li>按住 CTRL 键并选择下列测量：
+                           <ul>
+                              <li>max_beam_bending</li>
+                              <li>max_beam_tensile</li>
+                              <li>max_beam_torsion</li>
+                              <li>max_beam_total</li>
+                              <li>max_disp_mag</li>
+                              <li>max_disp_x</li>
+                              <li>max_disp_y</li>
+                              <li>max_disp_z</li>
+                              <li>max_rot_mag</li>
+                              <li>max_rot_x</li>
+                              <li>max_rot_y</li>
+                              <li>max_rot_z</li>
+                              <li>strain_energy</li>
+                           </ul>
+                        </li>
+                        <li>在“测量”(Measures) 对话框中，单击<b>“确定”(OK)</b> 返回至“静态分析定义”(Static Analysis Definition) 对话框。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>Framework</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">10. 关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 创建结果窗口并检查结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 窗口中选择 <b>Framework</b>。
+                  </p>
+                  <p class="step_p1">2. 单击<b>“审阅结果”(Review Results) </b><img alt="Graphic" src="graphics/en_zh-cn_0000176938.gif">。将出现“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>校验已将<b>“条纹”(Fringe)</b> 选定为“显示”(Display) 类型。
+                        </li>
+                        <li>选择<b>“数量”(Quantity)</b> 选项卡。
+                        </li>
+                        <li>校验<b>“应力”(Stress)</b> 已选定。
+                        </li>
+                        <li>从下拉菜单中选择 <b>MPa</b>。
+                        </li>
+                        <li>从“分量”(Component) 下拉菜单中选择 <b>von Mises</b>。
+                        </li>
+                        <li>取消选择<b>“扭转”(Torsional)</b>。
+                        </li>
+                        <li>选择<b>“显示选项”(Display Options)</b> 选项卡。如图所示完成字段。
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177498.gif', 'Enlarge', 'width=459, height=311,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177498.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177498.gif', 'Enlarge', 'width=459, height=311,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 单击<b>“确定并显示”(OK and Show)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177517.gif', 'Enlarge', 'width=450, height=260,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177517.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177517.gif', 'Enlarge', 'width=450, height=260,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 通过单击<b>“编辑”(Edit)</b><b> &gt; “复制”(Copy)</b> 创建另一个结果窗口。“结果窗口定义”(Result Window Definition) 对话框的副本随即出现。
+                  </p>
+                  <p class="step_p1">6. 选择<b>“数量”(Quantity)</b> 选项卡。从“在”(At) 下拉菜单中选择<b>“恢复点”(Recovery Point)</b>。
+                  </p>
+                  <p class="step_p1">7. 从“截面”(Sections) 下拉列表中选择<b>点 6</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 单击<b>“确定并显示”(OK and Show)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">重复这一过程并在具有横截面的梁上选取任意恢复点。同样显示那些结果。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177516.gif', 'Enlarge', 'width=450, height=216,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177516.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177516.gif', 'Enlarge', 'width=450, height=216,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 通过单击<b>“编辑”(Edit)</b><b> &gt; “复制”(Copy)</b> 创建合力和力矩图形。“结果窗口定义”(Result Window Definition) 对话框的副本随即出现。
+                  </p>
+                  <p class="step_p1">10. 从“显示类型”(Display Type) 下拉菜单中选择<b>“图形”(Graph)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 选择<b>“数量”(Quantity)</b> 选项卡。如图所示完成字段。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177515.gif', 'Enlarge', 'width=643, height=329,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177515.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177515.gif', 'Enlarge', 'width=643, height=329,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在“图形位置”(Graph Location) 部分，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif"> 并选择框架的顶部水平梁。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">13. 单击<b>“确定并显示”(OK and Show)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">为沿着 X 轴和 Z 轴的“梁合成”(Beam Resultant) 重复此过程。同样，尝试显示“梁合成”(Beam Resultant)，但是，这次将“力矩”(Moment) 用作第二个量。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000177514.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000177514.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000177514.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b> 返回至 Creo Simulate。在“消息”(Message) 对话框中单击<b>“否”(No)</b>。
+                  </p>
+                  <p class="step_p1">15. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“文件”(File)</b><b> &gt; “管理会话”(Manage Session)</b><b> &gt; “拭除当前”(Erase Current)</b> 以关闭显示的窗口，并从内存中拭除模型。当提示您确认时，请单击<b>“是”(Yes)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_33" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_33&#34;, T3911_33)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

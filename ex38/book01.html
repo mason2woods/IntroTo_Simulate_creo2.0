@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid21657_UnderstandingModalAnalysisWithPrest1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_38" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_38&#34;, T3911_38)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 了解“使用预应力的模态分析”</h2><br><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012542.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012623.gif"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Analysis\AdvModalAnalysis</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png"> VIOLIN_A_STRING_SIMULATE.PRT
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 VIOLIN_A_STRING.PRT</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义梁理想化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“理想化”(Idealizations) 组中单击<b>“梁”(Beam) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011764.gif">。“梁定义”(Beam Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“点-点”(Point-Point)</b>。
+                  </p>
+                  <p class="step_p1">4. 在模型中，选择 <b>P_STRING_AT_BRIDGE</b> 作为第一参考点。
+                  </p>
+                  <p class="step_p1">5. 在模型中，选择 <b>PNT0</b> 作为第二参考点。
+                  </p>
+                  <p class="step_p1">6. 在“材料”(Material) 部分，单击<b>“更多”(More)</b>。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">7. 选择 <b>NYLON</b>，然后单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">8. 在“方向”(Orientation) 部分的 Y 字段中键入 <b>1</b>。
+                  </p>
+                  <p class="step_p1">9. 选择<b>“开始”(Start)</b> 选项卡。在“梁截面”(Beam Section) 部分，单击<b>“更多”(More)</b>。“梁截面”(Beam Sections) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“新建”(New)</b>。“梁截面定义”(Beam Section Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">11. 在“名称”(Name) 字段中键入 <b>B_String</b>。
+                  </p>
+                  <p class="step_p1">12. 选择<b>“截面”(Section)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">13. 从“类型”(Type) 下拉菜单中选择<b>“实心圆”(Solid Circle)</b>。
+                  </p>
+                  <p class="step_p1">14. 在 R 字段中键入 <b>0.35</b>。
+                  </p>
+                  <p class="step_p1">15. 单击<b>“确定”(OK)</b> 返回“梁截面”(Beam Sections) 对话框。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“确定”(OK)</b> 返回“梁定义”(Beam Definition) 对话框。
+                  </p>
+                  <p class="step_p1">17. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">已经预定义三个额外的梁元素。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">4. 在模型中，选择 <b>P_STRING_AT_BRIDGE</b>。
+                  </p>
+                  <p class="step_p1">5. 在“旋转”(Rotation) 部分中，单击<b>“固定的旋转”(Fixed Rotation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011798.gif"> 用于 X、Y 和 Z 旋转。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">9. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">10. 在模型中，选择 <b>P_STRING_AT_Fingerboard</b>。
+                  </p>
+                  <p class="step_p1">11. 在“平移”(Translation) 部分，针对 X 平移单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif">。
+                  </p>
+                  <p class="step_p1">12. 在“旋转”(Rotation) 部分中，单击<b>“固定的旋转”(Fixed Rotation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011798.gif"> 用于 X、Y 和 Z 旋转。
+                  </p>
+                  <p class="step_p1">13. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">所有这些约束都是同一个约束集的一部分，因此，在系统上同时运行。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义并运行模态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建模态分析”(New Modal)</b>。“模态分析定义”(Modal Analysis Definition) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Violin_A_String_modal</b>。
+                        </li>
+                        <li>选择<b>“模式”(Modes)</b> 选项卡。在“模式数”(Number of Modes) 字段中键入 <b>6</b>。
+                        </li>
+                        <li>选择<b>“输出”(Output)</b> 选项卡。在“绘制栅格”(Plotting Grid) 字段中键入 <b>10</b>。
+                        </li>
+                        <li>选择<b>“收敛”(Convergence)</b> 选项卡。
+                           <ul>
+                              <li>从“方法”(Method) 下拉菜单中选择<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                              </li>
+                              <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b> 。
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>Violin_A_String_modal</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">仔细检查在汇总文件中显示的信息。请注意，在汇总报告的底部报告了六个固有模式。所有的频率值都以 Hz 为单位进行报告。<br>另请注意，在同样的频率上有两种模式。需要创建结果窗口来标识“梁”实际上在那些频率上的振荡方式。
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">10. 关闭所有对话框。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义预应力载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+                  <p class="step_p1">4. 在模型中，选择 <b>P_STRING_AT_FINGERBOARD</b>。
+                  </p>
+                  <p class="step_p1">5. 在“力”(Force) 部分的 X 字段中键入 <b>38.5</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 定义并运行静态分析和预应力分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Violin_A_String_prestress_case</b>。
+                        </li>
+                        <li>选择在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中显示的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b> 。
+                        </li>
+                        <li>在“限制”(Limits) 部分的“收敛百分比 ”(Percent Convergence) 部分中键入 <b>5</b>。
+                        </li>
+                        <li>在“收敛于”(Converge on) 部分中，校验<b>“局部位移、局部应变能和全局 RMS 应力”(Local Displacement, Local Strain Energy and Global RMS Stress)</b> 已被选中。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“文件”(File)</b><b> &gt; “新建预应力分析”(New Prestress)</b><b> &gt; “模态”(Modal)</b>。“预应力模态分析定义”(Prestress Modal Analysis Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">7. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Violin_A_String_modal_prestress</b>。
+                        </li>
+                        <li>选择 <b>ConstraintSet1</b>。
+                        </li>
+                        <li>在“模式数”(Number of Modes) 字段中键入 <b>6</b>。
+                        </li>
+                        <li>单击<b>“前一分析”(Previous Analysis)</b> 选项卡，并校验 <b>Violin_A_String_prestress_case</b> 已被选中。
+                        </li>
+                        <li>选择<b>“输出”(Output)</b> 选项卡。在“绘制栅格”(Plotting Grid) 字段中键入 <b>10</b>。取消选择“计算”(Calculate) 部分中的所有选项。
+                        </li>
+                        <li>选择<b>“收敛”(Convergence)</b> 选项卡。
+                        </li>
+                        <li>从“方法”(Method) 下拉菜单中选择<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b> 。
+                        </li>
+                        <li>在“限制”(Limits) 部分的“收敛百分比 ”(Percent Convergence) 部分中键入 <b>5</b>。
+                        </li>
+                        <li>在“收敛于”(Converge on) 部分中，选择<b>“频率、局部位移和局部应变能”(Frequency, Local Displacement and Local Strain Energy)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">10. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">11. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>Violin_A_String_modal_prestress</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">因为您没有运行在“预应力模态”分析中参考的“静态分析”，所以当运行 Violin_A_String_modal_prestress 分析时，Creo Simulate 将首先运行“静态分析”，然后运行“预应力模态分析”。Creo Simulate
+                                 可以使结果、报告和条纹图对两个分析均适用。
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">12. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">请注意，报告的第一个频率值为 440 Hz。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">13. 关闭所有对话框并返回到 Creo Simulate 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_38" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_38&#34;, T3911_38)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

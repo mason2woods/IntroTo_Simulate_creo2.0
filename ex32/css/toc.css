@@ -1,0 +1,116 @@
+body{
+	margin : 0.167em;
+	background : white;
+	font-family: Verdana, Arial, sans-serif;
+}
+.hr
+{
+color: #FCCD63;
+height: 0.1em;
+margin-left: 0.1em;
+margin-right: 0.1em;
+margin-top: -0.1em;
+}
+.bookmap_title {
+font-size: 1.256em; 
+color: #666666; 
+margin-left: 0.65em; 
+/*margin-top: 0.25em; */
+margin-top: -0.2em; 
+margin-bottom: 0.9em; 
+text-align: left; 
+line-height: 1.1em; 
+font-weight: bold; 
+text-indent: 0em; 
+}
+.lab_title
+{
+font-size: 1.125em; 
+font-weight: bold; 
+color: #666666; 
+line-height: 1em; 
+margin-bottom: 0.15em;
+}
+.normal
+{
+font-size: 0.95em; 
+font-weight: normal; 
+color: #666666; 
+line-height: 1.2em; 
+margin-top: 0.1em; 
+margin-bottom: 0.15em;
+}
+.module
+{
+margin-top: 0.85em; 
+margin-left: 1.05em; 
+margin-right: 1.16em; 
+margin-bottom: 0.4em;
+line-height: 1.1em; 
+font-weight: bold; 
+font-weight: normal; 
+font-size: 0.95em; 
+color: #000000; 
+text-align: left; 
+text-indent: 0em; 
+}
+.exercise
+{
+margin-top: 0.45em; 
+margin-bottom: 0.083em; 
+margin-left: 2.63em; 
+margin-right: 2.1em; 
+text-indent: 0em; 
+text-align: left; 
+line-height: 1.1; 
+font-weight: normal; 
+font-size: 0.95em; 
+color: #000000; 
+}
+.cyk
+{
+margin-left: 2.63em; 
+margin-right: 2.1em;
+margin-top: 0.45em; 
+margin-bottom: 0.96em;
+font-size: 0.95em; 
+font-weight: normal; 
+color: #666666; 
+line-height: 1.1; 
+}
+div#buttons a {
+	display:block;
+	text-align:left;
+	margin-left:1em;
+	margin-bottom:0.45em;	
+	width: 100%;
+	text-decoration:none;
+	background-color:#FFFFFF;
+	font-size:0.7em;
+	font-weight:bold;
+	color:#585858;
+	}
+
+div#clearchecks a {
+	display:block;
+	text-align:center;
+	width: 12em;
+	background-color:#849EB4;
+	text-decoration:none;
+	font-size:11px;
+	font-weight:bold;
+	border-left:#44627C solid thin;
+	border-top:#44627C solid thin;
+	border-bottom:#44627C solid thin;
+	border-right:#44627C solid thin;
+	color:#FFFFFF;
+	margin-bottom:2em;	
+}
+.small
+{
+font-size : 0.7em;
+}
+a
+{
+color:#000000;
+}

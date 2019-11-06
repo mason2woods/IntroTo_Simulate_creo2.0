@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<title>PTC University: Course Exercises</title>
+<script language="JavaScript1.2">
+function showCheck(id1, id2)
+{
+	var expire_days=5;
+	var expire_date=new Date();
+	var ms_from_now=expire_days*24*60*60*1000;
+	expire_date.setTime(expire_date.getTime() + ms_from_now);
+	var expire_string=expire_date.toGMTString();
+	var setting='inline';
+	var newName=id1;
+	var idName=newName + '=' + setting;
+
+	var old_cookie = document.cookie;
+	document.cookie=old_cookie + ':' + idName +'; expires=' + expire_string;
+	id2.style.display=setting;
+}
+</script>
+<script src="javascript/content.js"></script>
+</head>
+
+<frameset framespacing="0" border="0" frameborder="0" rows="41,*">
+<frame name="Top" scrolling="no" noresize target="main" src="indexTop.htm"
+marginwidth="0" marginheight="0">
+<frame name="main" src="book01.html" marginwidth="0" marginheight="0"
+scrolling="auto">
+<noframes>
+<body "topmargin="0" leftmargin="0" >
+
+
+<p>This page uses frames, but your browser doesn't support them.</p>
+
+</body>
+</noframes>
+</frameset>
+
+</html>

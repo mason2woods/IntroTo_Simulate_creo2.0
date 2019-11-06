@@ -1,0 +1,591 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20515_1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_16" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_16&#34;, T3911_16)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 使用 AutoGEM 设置 - 网格化零件</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>使用 AutoGEM 工具网格化模型。</li>
+            <li>创建体积块区域用于网格细化。</li>
+            <li>创建曲面区域用于网格细化。</li>
+            <li>创建用于网格化细化的曲线和点。</li>
+            <li>创建由模型曲率驱动的 AutoGEM 控制。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在本练习中，将探索 Creo Simulate 中的附加网格化功能。将利用已导入的数据文件，即 STEP 文件。</p>
+         <p>调整某些 AutoGEM 设置和控制。其他选项自始至终会被使用和解释，且均可应用于任何类型的几何 (在 Creo Parametric 中导入或创建)。此外，还可创建附加几何的模拟特征 (例如曲线和点)，并在通过 AutoGEM 工具创建元素时使用这些特征。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012542.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012623.gif"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Modeling\Meshing</b></p>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 打开并调查几何模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 单击<b>“文件”(File)</b><b> &gt; “打开”(Open)</b>。“文件打开”(File Open) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">2. 从“类型”(Type) 下拉列表中选择<b>STEP (.stp, .step)</b>。
+                  </p>
+                  <p class="step_p1">3. 选择 <b>meshing.stp</b>，然后单击<b>“打开”(Open)</b>。“导入新模型”(Import New Model) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">4. 保留全部默认设置并单击<b>“确定”(OK)</b>。几何显示在窗口中。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在功能区中，选择<b>“检查”(Inspect)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">6. 在“测量”(Measure) 组的“测量类型”(Measure Type) 下拉菜单中选择<b>“体积块”(Volume) </b><img alt="Graphic" src="graphics/en_zh-cn_0000305963.gif">。“测量:体积块”(Measure:Volume) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">7. 在“测量:体积块”(Measure:Volume) 对话框中，单击下拉箭头以展开结果布局。将在“测量:体积块”(Measure:Volume) 对话框中报告模型体积，如图所示。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">如果已经选择“实体几何”(Solid Geometry) 并且在模型中仅曲面可用，则不会报告体积。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">8. 关闭“测量:体积块”(Measure:Volume) 对话框。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304641.gif', 'Enlarge', 'width=356, height=264,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304641.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304641.gif', 'Enlarge', 'width=356, height=264,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 向模型分配材料属性。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“材料”(Material) 组中单击<b>“材料”(Materials) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011841.gif">。将出现“材料”(Materials) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从材料列表中选择 <b>brass.mtl</b>，然后单击<b>“添加材料”(Add Material) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011739.gif">。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">5. 在“材料”(Material) 组中单击<b>“材料分配”(Material Assignment) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011840.gif">。将出现“材料分配”(Material Assignment) 对话框。
+                  </p>
+                  <p class="step_p1">6. 校验<b>“零件:MESHING”(Part:MESHING)</b> 已在“参考”(References) 部分中列出，并且 <b>BRASS</b> 作为材料在“属性”(Properties) 部分列出。
+                  </p>
+                  <p class="step_p1">7. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 向模型添加网格。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">3. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。
+                  </p>
+                  <p class="step_p1">4. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">5. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">6. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159694.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159694.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159694.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 创建体积块区域用于网格细化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“区域”(Regions) 组中的“体积块区域”(Volume Region) 下拉菜单中单击<b>“拉伸”(Extrude) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011799.gif">。“拉伸”(Extrude) 操控板随即出现。
+                  </p>
+                  <p class="step_p1">3. 选择<b>“放置”(Placement)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">4. 单击<b>“定义”(Define)</b>。将出现“草绘”(Sketch) 对话框。
+                  </p>
+                  <p class="step_p1">5. 在模型中选择显示的曲面。</p>
+                  <p class="step_p1">6. 单击<b>“草绘”(Sketch)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159693.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159693.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159693.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“草绘”(Sketch)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 在“设置”(Setup) 组中单击<b>“草绘视图”(Sketch View) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012361.gif"> 以定向草绘平面。
+                  </p>
+                  <p class="step_p1">9. 在“设置”(Setup) 组中单击<b>“参考”(References) </b><img alt="Graphic" src="graphics/en_zh-cn_0000010906.gif">。“参考”(References) 对话框随即显示。
+                  </p>
+                  <p class="step_p1">10. 选择孔的边作为将要草绘的几何的参考。</p>
+                  <p class="step_p1">11. 单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">12. 草绘一个以该孔为中心的直径为 5.0 mm 的圆，如图所示。</p>
+                  <p class="step_p1">13. 单击<b>“确定”(OK) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013516.gif"> 以返回到“拉伸”(Extrude) 操控板。
+                  </p>
+                  <p class="step_p1">14. 单击<b>“穿透”(Through All) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013844.gif">。
+                  </p>
+                  <p class="step_p1">15. 单击<b>“应用保存更改”(Apply-Save Changes) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012476.gif">。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159692.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159692.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159692.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">16. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">17. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">18. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。请注意孔周围元素的分布。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159691.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159691.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159691.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top"> 现在体积块区域的虚拟边界是模型的一部分，因此，将使用此边界强制创建节点。另请注意，模型的背面 (体积块区域的另一个边界的所在之处) 也已经网格化。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">19. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">20. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">21. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 创建曲面区域用于网格细化。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 从“区域”(Regions) 组中单击<b>“曲面区域”(Surface Region) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011936.gif">。“曲面区域”(Surface Region) 操控板随即出现。
+                  </p>
+                  <p class="step_p1">3. 选择<b>“参考”(References)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">4. 在“草绘”(Sketch) 部分，单击<b>“定义”(Define)</b>。将出现“草绘”(Sketch) 对话框。
+                  </p>
+                  <p class="step_p1">5. 在模型中选择显示的曲面。</p>
+                  <p class="step_p1">6. 单击<b>“草绘”(Sketch)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159690.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159690.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159690.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“草绘”(Sketch)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 在“设置”(Setup) 组中单击<b>“草绘视图”(Sketch View) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012361.gif"> 以定向草绘平面。
+                  </p>
+                  <p class="step_p1">9. 在“设置”(Setup) 组中单击<b>“参考”(References) </b><img alt="Graphic" src="graphics/en_zh-cn_0000010906.gif">。“参考”(References) 对话框随即显示。
+                  </p>
+                  <p class="step_p1">10. 选择孔的边作为将要草绘的几何的参考。</p>
+                  <p class="step_p1">11. 单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">12. 草绘一个以该孔为中心的直径为 7.5 mm 的圆，如图所示。</p>
+                  <p class="step_p1">13. 单击<b>“确定”(OK) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013516.gif"> 返回到“曲面区域”(Surface Region) 操控板。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159689.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159689.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159689.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 在模型中选择显示的曲面。</p>
+                  <p class="step_p1">15. 单击<b>“应用保存更改”(Apply-Save Changes) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012476.gif">。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159688.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159688.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159688.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">16. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">17. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">18. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。请注意孔周围元素的分布。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000159687.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000159687.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000159687.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top"> 现在曲面区域的虚拟边界是模型的一部分，因此，将使用此边界强制创建节点。现在，模型的背面还没有网格化。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">19. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">20. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">21. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 创建用于网格化细化的曲线和点。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“基准”(Datum) 组中单击<b>“草绘”(Sketch) </b><img alt="Graphic" src="graphics/en_zh-cn_0000297826.gif">。将出现“草绘”(Sketch) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在模型中选择显示的曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304846.gif', 'Enlarge', 'width=444, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304846.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304846.gif', 'Enlarge', 'width=444, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 使用默认方向，在“草绘”(Sketch) 对话框中单击<b>“草绘”(Sketch)</b>。
+                  </p>
+                  <p class="step_p1">5. 在“设置”(Setup) 组中单击<b>“草绘视图”(Sketch View) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012361.gif"> 以定向草绘平面。
+                  </p>
+                  <p class="step_p1">6. 在“设置”(Setup) 组中单击<b>“参考”(References) </b><img alt="Graphic" src="graphics/en_zh-cn_0000010906.gif">。“参考”(References) 对话框随即显示。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 选择如图所示的边作为将要草绘的几何的参考。</p>
+                  <p class="step_p1">8. 单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304845.gif', 'Enlarge', 'width=414, height=337,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304845.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304845.gif', 'Enlarge', 'width=414, height=337,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 在“草绘”(Sketching) 组中单击<b>“线链”(Line Chain) </b><img alt="Graphic" src="graphics/en_zh-cn_0000112860.gif">。
+                  </p>
+                  <p class="step_p1">10. 相对于所显示的坐标系参考草绘直线并对其进行标注。</p>
+                  <p class="step_p1">11. 单击<b>“确定”(OK) </b><img alt="Graphic" src="graphics/en_zh-cn_0000013516.gif"> 以完成草绘。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304844.gif', 'Enlarge', 'width=420, height=342,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304844.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304844.gif', 'Enlarge', 'width=420, height=342,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">12. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">13. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">14. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304843.gif', 'Enlarge', 'width=438, height=348,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304843.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304843.gif', 'Enlarge', 'width=438, height=348,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top"> 请注意曲线不参与网格。没有起始或终止于曲线的节点。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">15. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">16. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">17. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">18. 单击<b>“最大元素尺寸”(Maximum Element Size) </b><img alt="Graphic" src="graphics/en_zh-cn_0000155110.gif">，然后选择<b>硬曲线 </b><img alt="Graphic" src="graphics/en_zh-cn_0000304759.gif">。
+                  </p>
+                  <p class="step_p1">19. “硬曲线控制”(Hard Curve Control) 对话框随即出现。在模型上，选择刚刚创建的曲线。</p>
+                  <p class="step_p1">20. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">21. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">22. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">23. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304842.gif', 'Enlarge', 'width=446, height=349,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304842.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304842.gif', 'Enlarge', 'width=446, height=349,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top"> 请注意，曲线参与网格。节点将会生成并驻留在曲线上。同时，请注意有限元计数中的更改。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">24. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">25. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">26. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">27. 在“基准”(Datum) 组中单击<b>“点”(Point) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012982.gif">。“基准点”(Datum Point) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">28. 沿着如图所示的边放置三个点。根据默认长度比例标注，在 0.25、0.5 和 0.75 标注这些点。</p>
+                  <p class="step_p1">29. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304841.gif', 'Enlarge', 'width=443, height=345,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304841.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304841.gif', 'Enlarge', 'width=443, height=345,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">30. 单击<b>“最大元素尺寸”(Maximum Element Size) </b><img alt="Graphic" src="graphics/en_zh-cn_0000155110.gif">，然后选择<b>“硬点”(Hard Point) </b><img alt="Graphic" src="graphics/en_zh-cn_0000195074.gif">。
+                  </p>
+                  <p class="step_p1">31. “硬点控制”(Hard Point Control) 对话框随即出现。在“参考”(References) 部分中，选择<b>“特征”(Feature)</b>。
+                  </p>
+                  <p class="step_p1">32. 选择刚刚创建的三个基准点中的任意一个。全部三个基准点便会被选定，因为它们是相同特征的一部分。基准点特征随即出现在选择部分。</p>
+                  <p class="step_p1">33. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">34. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">35. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">36. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304840.gif', 'Enlarge', 'width=443, height=342,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304840.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304840.gif', 'Enlarge', 'width=443, height=342,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top"> 请注意使用被创建为节点的基准点的元素的分布。同时，请注意有限元计数中的更改。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">37. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">38. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">39. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 7.</b> 创建由模型曲率驱动的 AutoGEM 控制。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 单击<b>“最大元素尺寸”(Maximum Element Size) </b><img alt="Graphic" src="graphics/en_zh-cn_0000155110.gif">，然后选择<b>边长度除以曲率 </b><img alt="Graphic" src="graphics/en_zh-cn_0000304760.gif">。
+                  </p>
+                  <p class="step_p1">2. “边长度除以曲率控制”(Edge Length by Curvature Control) 对话框随即出现。在“边长度/曲率半径的比率”(Edge Length/Radius of Curvature ratio) 字段中，键入 <b>0.7</b>。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">5. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">6. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304839.gif', 'Enlarge', 'width=439, height=342,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304839.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304839.gif', 'Enlarge', 'width=439, height=342,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">请注意有限元计数中的更改。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">7. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">8. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">9. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">10. 在模型树中，展开<b>“AutoGEM 控制”(AutoGEM Controls)</b>。
+                  </p>
+                  <p class="step_p1">11. 右键单击 <b>AutoGEMControl3</b>，然后选择<b>“编辑定义”(Edit Definition)</b>。
+                  </p>
+                  <p class="step_p1">12. “边长度除以曲率”(Edge Length by Curvature) 对话框随即出现。选中“忽略以下曲率半径”(Ignore Radius of Curvature below) 复选框，然后在字段中键入 <b>0.51</b>。从“单位”(Units) 下拉列表中选择 <b>mm</b>。
+                  </p>
+                  <p class="step_p1">13. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">15. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">16. 保留所有默认设置并单击<b>“创建”(Create)</b>。模型已网格化，如图所示。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000304838.gif', 'Enlarge', 'width=438, height=341,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000304838.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000304838.gif', 'Enlarge', 'width=438, height=341,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">请注意有限元计数和分布的更改。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p class="step_p1">17. 在“AutoGEM 摘要”(AutoGEM Summary) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">18. 在“诊断：AutoGEM 网格”(Diagnostics:AutoGEM Mesh) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">19. 在 AutoGEM 对话框中，单击<b>“关闭”(Close)</b>。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_16" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_16&#34;, T3911_16)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

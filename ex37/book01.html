@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid21607_UnderstandingStaticAnalysisWithPres1" style="margin-top: -12pt">
+         <table border="0" cellpadding="2" class="header" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_37" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_37&#34;, T3911_37)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>过程: 了解预应力静态分析</h2><br><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Analysis\Prestress</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png"> SHEETMETAL_PRESTRESSED_SIMULATE.PRT 
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 SHEETMETAL_PRESTRESSED_LEVER.PRT。</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“边/曲线”(Edges/Curves)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在模型中，选择显示的边。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184967.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184967.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184967.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在“平移”(Translation) 部分中，针对 X 和 Z 平移单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif">。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">7. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 单击“约束”(Constraints) 组下拉菜单，然后选择<b>“对称”(Symmetry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011963.gif">。将出现“对称约束”(Symmetry Constraint) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 在模型中，选择显示的曲面。</p>
+                  <p class="step_p1">10. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184966.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184966.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184966.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">12. 单击“约束”(Constraints) 组下拉菜单，然后选择<b>“对称”(Symmetry) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011963.gif">。将出现“对称约束”(Symmetry Constraint) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">13. 在模型中，选择显示的曲面。</p>
+                  <p class="step_p1">14. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">所有这些约束都是同一个约束集的一部分，因此，在系统上同时运行。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184965.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184965.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184965.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义压力载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“压力载荷”(Pressure Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011856.gif">。“压力载荷”(Pressure Load) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“新建”(New)</b>。将出现“载荷集定义”(Load Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 在“名称”(Name) 字段中键入 <b>Operational_Pressure</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回“压力载荷”(Pressure Load) 对话框。
+                  </p>
+                  <p class="step_p1">6. 在模型中，选择板的顶部曲面。</p>
+                  <p class="step_p1">7. 在“值”(Value) 字段中键入 <b>0.01</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 单击<b>“预览”（Preview）</b> 并查看载荷的图形分布。
+                  </p>
+                  <p class="step_p1">9. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184964.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184964.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184964.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义纵向预应力载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“新建”(New)</b>。将出现“载荷集定义”(Load Set Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 在“名称”(Name) 字段中键入 <b>Prestress</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 在模型中，选择所显示板的平整曲面。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184963.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184963.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184963.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在“力”(Force) 部分的 Z 字段中键入 <b>-80000</b>。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“预览”（Preview）</b> 并查看载荷的图形分布。
+                  </p>
+                  <p class="step_p1">9. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184962.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184962.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184962.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 定义 AutoGEM 控制并网格化模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在 AutoGEM 组中，单击“控制组”(Controls Group) 下拉菜单，然后单击<b>“映射网格”(Mapped Mesh) </b><img alt="Graphic" src="graphics/en_zh-cn_0000194857.gif">。“映射的网格控制”(Mapped Mesh Control) 对话框随即打开。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 按住 CTRL 键，并在模型中选择所显示的四个顶点。这些顶点在“第一个面”部分的“参考”中列出。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184961.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184961.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184961.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 按住 CTRL 键，并在模型中选择与所使用的前一个面相对的表面上的四个顶点。这些顶点在“第二个面”部分的“参考”中列出。</p>
+                  <p class="step_p1">5. 校验 <b>BRICK1</b> 已被选中，然后在“细分”(Subdivisions) 部分的“默认”(Default) 字段中键入 <b>10</b>。请注意模型中元素细分的图形表示。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000184960.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000184960.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000184960.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">7. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">8. 从 AutoGEM 组中单击 <b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">9. 单击<b>“创建”(Create)</b> 并检查生成的网格。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“关闭”(Close)</b> 以关闭所有对话框并返回至 Creo Simulate 窗口。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 定义并运行静态分析和预应力分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>sheetmetal_lin_super</b>。
+                        </li>
+                        <li>在“约束集/元件”(Constraint Set/Component) 部分，选择 <b>ConstraintSet1</b>。
+                        </li>
+                        <li>在“载荷集/元件”(Load Set/Component) 部分，选择 <b>Operational_Pressure</b> 和 <b>Prestress</b>。取消选择任何已选择的其他载荷集。
+                        </li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b> 。
+                        </li>
+                        <li>在“限制”(Limits) 部分的“收敛百分比 ”(Percent Convergence) 部分中键入 <b>5</b>。
+                        </li>
+                        <li>校验<b>“局部位移、局部应变能和全局 RMS 应力”(Local Displacement, Local Strain Energy and Global RMS Stress)</b> 已被选中。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“文件”(File)</b><b> &gt; “新建预应力分析”(New Prestress)</b><b> &gt; “静态”(Static)</b>。“预应力静态分析定义”(Prestress Static Analysis Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">7. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>sheetmetal_prestressed_non_comb</b>。
+                        </li>
+                        <li>选择 <b>ConstraintSet1</b> 和 <b>Operational_Pressure</b> 载荷集。取消选择其他任何载荷集。
+                        </li>
+                        <li>单击<b>“前一分析”(Previous Analysis)</b> 选项卡，然后选择<b>“使用来自前一设计研究的静态分析结果”(Use static analysis results from previous design study)</b>。
+                        </li>
+                        <li>仅选择 <b>Prestress</b> 载荷集。
+                        </li>
+                        <li>选择<b>“收敛”(Convergence)</b> 选项卡。
+                        </li>
+                        <li>从“方法”(Method) 下拉菜单中选择<b>“多通道自适应”(Multi-Pass Adaptive)</b>。
+                        </li>
+                        <li>在“多项式阶”(Polynomial Order) 部分的“最小”(Minimum) 字段中键入 <b>1</b>，在“最大”(Maximum) 字段中键入 <b>9</b> 。
+                        </li>
+                        <li>在“限制”(Limits) 部分的“收敛百分比 ”(Percent Convergence) 部分中键入 <b>1</b>。
+                        </li>
+                        <li>校验<b>“局部位移、局部应变能和全局 RMS 应力”(Local Displacement, Local Strain Energy and Global RMS Stress)</b> 已被选中。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">9. 选择 <b>sheetmetal_prestressed_non_comb</b>。单击<b>“编辑”(Edit)</b><b> &gt; “复制”(Copy)</b>。研究的副本将被列出。
+                  </p>
+                  <p class="step_p1">10. 在研究副本中单击鼠标右键，然后选择<b>“编辑”(Edit)</b>。“预应力静态分析定义”(Prestress Static Analysis Definition) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">11. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>sheetmetal_prestressed_combined</b>。
+                        </li>
+                        <li>单击<b>“前一分析”(Previous Analysis)</b> 选项卡。取消选择<b>“使用来自前一设计研究的静态分析结果”(Use static analysis results from previous design study)</b>。
+                        </li>
+                        <li>在“载荷集”(Load Set) 部分选择<b>“预应力”(Prestress)</b>。
+                        </li>
+                        <li>选择<b>“将结果与前一静态分析的结果组合”(Combine Results with Results from Previous Static Analysis)</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">12. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">13. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">14. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">15. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，选择 <b>sheetmetal_lin_super</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">16. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。
+                  </p>
+                  <p class="step_p1">17. 关闭所有对话框并返回至“分析和设计研究”(Analyses and Design Studies) 对话框。</p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">18. 运行剩余的两个分析并查看结果。</p>
+                  <p class="step_p1">19. 仔细检查在汇总文件中显示的信息。请注意最大位移量级和 von Mises 的最大值。请注意，线性组合 (静态) 与在已变形的模型上施加载荷 (预应力) 的效果是不同的。 </p>
+                  <p class="step_p1">20. 关闭所有对话框并返回到 Creo Simulate 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <p>过程就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_37" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_37&#34;, T3911_37)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

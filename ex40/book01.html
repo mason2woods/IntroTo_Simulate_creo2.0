@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid21764_1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_40" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_40&#34;, T3911_40)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 了解非线性稳定性分析</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>执行非线性稳定性分析。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">在本练习中，您将检查 Creo Simulate 如何处理大变形分析中的特殊情况。在本示例中，您将检查经历稳定性丢失的板簧的行为。Creo Simulate 为此类问题所使用的算法名为“弧长方法”，并且在本练习中用来求解结构的载荷-偏转曲线中具有导致不稳定性的部分负斜率的区域。</p><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012542.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000012623.gif"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Analysis\NLStability</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png"> CUP_SPRING_SIMULATE.PRT 
+         </p>
+         <div class="note">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+               <tbody>
+                  <tr>
+                     <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                     <td colspan="2" height="1" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td valign="top" width="32">
+                        <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                     </td>
+                     <td valign="top">Creo Parametric 用户打开 CUP_SPRING.PRT。</td>
+                  </tr>
+                  <tr>
+                     <td bgcolor="#ffffff" width="35"></td>
+                     <td colspan="2" valign="top">
+                        <hr align="right" size="1" style="color: #567a9a">
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 定义 2D 轴对称模型类型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 单击“设置”(Set Up) 组中的<b>“模型设置”(Model Setup) </b><img alt="Graphic" src="graphics/en_zh-cn_0000169462.gif">。“模型设置”(Model Setup) 对话框随即出现。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“高级”(Advanced)</b>。
+                  </p>
+                  <p class="step_p1">4. 在“类型”(Type) 部分中，选择<b>“2D 轴对称”(2D Axisymmetric)</b>。
+                  </p>
+                  <p class="step_p1">5. 单击“坐标系”(Coordinate System) 字段。在模型中，选择 <b>PRT_CSYS_DEF</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击“几何”(Geometry) 字段。在模型中，选择显示的曲面。</p>
+                  <p class="step_p1">7. 单击<b>“确定”(OK)</b>。
+                  </p>
+                  <p class="step_p1">8. 在提示中单击<b>“确认”(Confirm)</b>。
+                  </p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000205017.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000205017.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000205017.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义模型的材料。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“材料”(Material) 组中单击<b>“材料分配”(Material Assignment) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011840.gif">。将出现“材料分配”(Material Assignment) 对话框。
+                  </p>
+                  <p class="step_p1">3. 在模型中，选择在第一个任务中选定的曲面。</p>
+                  <p class="step_p1">4. 在“属性”(Properties) 部分中，单击<b>“更多”(More)</b>。
+                  </p>
+                  <p class="step_p1">5. 选择 <b>steel.mtl</b> 并将其添加到模型中。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b> 以返回到“材料分配”(Material Assignment) 对话框。
+                  </p>
+                  <p class="step_p1">7. 校验未选择任何“材料方向”(Material Orientation)。</p>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义模型的载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“载荷”(Loads) 组中单击<b>“力/力矩载荷”(Force/Moment Load) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011796.gif">。将出现“力/力矩载荷”(Force/Moment Load) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在模型中，选择显示的点。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000205016.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000205016.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000205016.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在“力/力矩载荷”(Force/Moment Load) 对话框中“力”(Force) 部分的 Y 字段中键入 <b>2500</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 在模型中定义约束。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“约束”(Constraints) 组中单击<b>“位移”(Displacement) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011804.gif">。将出现“约束”(Constraint) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“参考”(References) 下拉菜单中选择<b>“点”(Points)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在模型中，选择显示的点。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000205015.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000205015.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000205015.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">5. 在“约束”(Constraint) 对话框的“平移”(Translation) 部分中，针对 X 平移单击<b>“自由平移”(Free Translation) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011824.gif">。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 创建网格控制并网格化模型。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在 AutoGEM 组中从“控制”(Controls) 下拉菜单中选择<b>“边分布”(Edge Distribution) </b><img alt="Graphic" src="graphics/en_zh-cn_0000176939.gif">。“边分布控制”(Edge Distribution Control) 对话框随即出现。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 在模型中，选择显示的边。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000205014.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000205014.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000205014.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 在“边分布控制”(Edge Distribution Control) 对话框中“属性”(Properties) 部分的“节点数”(Number of Nodes) 字段中键入 <b>4</b>。
+                  </p>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 在功能区中，选择<b>“精细模型”(Refine Model)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">7. 从 AutoGEM 组中单击<b>AutoGEM </b><img alt="Graphic" src="graphics/en_zh-cn_0000011784.gif">。将出现 AutoGEM 对话框。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“创建”(Create)</b>。
+                  </p>
+                  <p class="step_p1">9. 检查生成的网格。单击<b>“关闭”(Close)</b> 以关闭所有对话框。提示保存网格时单击<b>“否”(No)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 6.</b> 在模型中创建测量。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“测量”(Measures) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011918.gif">。将出现“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>reaction_force</b>。
+                        </li>
+                        <li>从“数量”(Quantity) 下拉菜单中选择<b>“力”(Force)</b>。
+                        </li>
+                        <li>从“分量”(Component) 下拉菜单中选择 <b>Y</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 在模型树中，展开<b>载荷/约束</b>和<b>载荷集 ConstraintSet1</b>。
+                  </p>
+                  <p class="step_p1">6. 在“测量定义”(Measure Definition) 对话框的“空间评估”(Spatial Evaluation) 部分中，单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif">，然后在模型树中选择 <b>Constraint1</b>。
+                  </p>
+                  <p class="step_p1">7. 在“测量定义”(Measure Definition) 对话框中，单击<b>“确定”(OK)</b> 以返回至“测量”(Measures) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">9. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Force</b>。
+                        </li>
+                        <li>从“数量”(Quantity) 下拉菜单中选择<b>“计算的测量”(Computed Measure)</b>。
+                        </li>
+                        <li>在“表达式”(Expression) 部分中键入 <b>-reaction_force</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">10. 在“测量定义”(Measure Definition) 对话框中，单击<b>“确定”(OK)</b> 以返回至“测量”(Measures) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">11. 单击<b>“新建”(New)</b>。将出现“测量定义”(Measure Definition) 对话框。
+                  </p>
+                  <p class="step_p1">12. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Deformation</b>。
+                        </li>
+                        <li>从“数量”(Quantity) 下拉菜单中选择<b>“位移”(Displacement)</b>。
+                        </li>
+                        <li>从“分量”(Component) 下拉菜单中选择 <b>Y</b>。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">13. 在“空间评估”(Spatial Evaluation) 部分中，从下拉菜单选择<b>“在点处”(At Point)</b>。
+                  </p>
+                  <p class="step_p1">14. 单击<b>“选择参考”(Select Reference) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011924.gif"> 并选择载荷施加处的点。
+                  </p>
+                  <p class="step_p1">15. 在“测量定义”(Measure Definition) 对话框中，单击<b>“确定”(OK)</b> 以返回至“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“关闭”(Close)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 7.</b> 定义并运行静态分析。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在功能区中，选择<b>“主页”(Home)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">2. 在“运行”(Run) 组中单击<b>“分析和研究”(Analyses and Studies) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011839.gif">。将出现“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+                  <p class="step_p1">3. 单击<b>“文件”(File)</b><b> &gt; “新建静态分析”(New Static)</b>。将出现“静态分析定义”(Static Analysis Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">4. 完成以下步骤：</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>在“名称”(Name) 字段中键入 <b>Cup_Spring</b>。
+                        </li>
+                        <li>选择<b>“非线性/使用载荷历史”(Nonlinear/Use Load Histories)</b>。
+                        </li>
+                        <li>在“非线性选项”(Nonlinear Options) 部分，选择<b>“计算大变形”(Calculate Large Deformations)</b>。
+                        </li>
+                        <li>选择显示在“约束集/元件”(Constraint Set/Component) 和“载荷集/元件”(Load Set/Component) 部分中的约束集和载荷集。</li>
+                        <li>单击<b>“收敛”(Convergence)</b> 选项卡，然后从“方法”(Method) 下拉菜单中单击<b>“单通道自适应”(Single-Pass Adaptive)</b>。
+                        </li>
+                        <li>选择<b>“包括突弹跳变”(Include Snap-through)</b>。
+                        </li>
+                        <li>选择<b>“输出”(Output)</b> 选项卡。
+                        </li>
+                        <li>在“计算”(Calculate) 部分中，选择<b>“应力”(Stresses)</b>、<b>“旋转”(Rotations)</b> 和<b>“反作用”(Reactions)</b>。
+                        </li>
+                        <li>在“出图”(Plot) 部分的“绘制栅格”(Plotting Grid) 字段中键入 <b>10</b>。
+                        </li>
+                        <li>在“输出步长”(Output Steps) 部分中，从下拉菜单选择<b>“用户定义的步长”(User-defined Steps)</b>。
+                        </li>
+                        <li>在“主步长数”(Number of Master Steps) 字段中键入 <b>21</b>。按 ENTER 键。
+                        </li>
+                     </ul>
+                  </div>
+                  <p class="step_p1">5. 单击<b>“确定”(OK)</b> 返回到“分析和设计研究”(Analyses and Design Studies) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">6. 单击<b>“配置运行设置”(Configure Run Settings) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011759.gif">。将出现“运行设置”(Run Settings) 对话框。
+                  </p>
+                  <p class="step_p1">7. 默认情况下，结果和临时输出目录被设置在工作目录中。两种分析都储存在此位置。单击<b>“确定”(OK)</b>。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">8. 在“分析和设计研究”(Analyses and Design Studies) 对话框中选择 <b>Cup_Spring</b>，然后单击<b>“开始运行”(Start Run) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011941.gif">。单击<b>“是”(Yes)</b> 以运行交互诊断。
+                  </p>
+                  <p class="step_p1">9. 分析完成后，单击<b>“显示研究状况”(Display Study Status) </b><img alt="Graphic" src="graphics/en_zh-cn_0000011803.gif"> 查看汇总报告。请注意，在汇总文件中正在报告突弹跳变的起点和终点检测。继续在整个汇总报告文件中监视这些报告。
+                  </p>
+                  <p class="step_p1">10. 关闭所有对话框并返回到 Creo Simulate 窗口。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 8.</b> 创建结果窗口并检查结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 在“分析和设计研究”(Analyses and Design Studies) 窗口中选择 <b>Cup_Spring</b>。
+                  </p>
+                  <p class="step_p1">2. 单击<b>“审阅结果”(Review Results) </b><img alt="Graphic" src="graphics/en_zh-cn_0000176938.gif">。将出现“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+                  <p class="step_p1">3. 从“显示类型”(Display Type) 下拉菜单中选择<b>“图形”(Graph)</b>。
+                  </p>
+                  <p class="step_p1">4. 选择<b>“数量”(Quantity)</b> 选项卡。
+                  </p>
+                  <p class="step_p1">5. 从“图形纵坐标 (竖直) 轴”(Graph Ordinate (Vertical) Axis) 下拉菜单中选择<b>“测量”(Measure)</b>。
+                  </p>
+                  <p class="step_p1">6. 单击<b>“测量”(Measures) </b><img alt="Graphic" src="graphics/en_zh-cn_0000195073.gif">。将出现“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">7. 从“用户定义”(User-Defined) 列中选择<b>“力”(Force)</b>。
+                  </p>
+                  <p class="step_p1">8. 单击<b>“确定”(OK)</b> 返回到“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+                  <p class="step_p1">9. 从“图形横坐标 (水平) 轴”(Graph Abscissa (Horizontal)) 的次级下拉菜单中选择 <b>“测量”(Measure)</b>。
+                  </p>
+                  <p class="step_p1">10. 单击<b>“测量”(Measures) </b><img alt="Graphic" src="graphics/en_zh-cn_0000195073.gif">。将出现“测量”(Measures) 对话框。
+                  </p>
+                  <p class="step_p1">11. 从“用户定义”(User-Defined) 列中选择<b>“变形”(Deformation)</b>。
+                  </p>
+                  <p class="step_p1">12. 单击<b>“确定”(OK)</b> 返回到“结果窗口定义”(Result Window Definition) 对话框。
+                  </p>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">13. 单击<b>“确定并显示”(OK and Show)</b> 显示结果。
+                  </p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">作为一项挑战，请运行相同的静态分析，但关闭“包括突弹跳变”(Include Snap-through) 的选项。图形化表示载荷相对于变形的变化并解释新的结果。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000205013.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000205013.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000205013.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">14. 单击<b>“文件”(File)</b><b> &gt; “退出结果”(Exit Results)</b> 返回至 Creo Simulate。在“消息”(Message) 对话框中单击<b>“否”(No)</b>。
+                  </p>
+                  <p class="step_p1">15. 在“分析和设计研究”(Analyses and Design Studies) 对话框中，单击<b>“关闭”(Close)</b>。
+                  </p>
+                  <p class="step_p1">16. 单击<b>“文件”(File)</b><b> &gt; “管理会话”(Manage Session)</b><b> &gt; “拭除当前”(Erase Current)</b>。在“拭除确认”(Erase Confirm) 提示中单击<b>“是”(Yes)</b>。
+                  </p>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_40" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_40&#34;, T3911_40)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

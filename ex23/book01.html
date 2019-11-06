@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="css/exercise.css"><script type="text/javascript" src="javascript/content.js"></script></head>
+   <body>
+      <div xmlns:ch="http://www.arbortext.com/namespace/chunker" class=" x-rcs-exercise-1-0" id="atidocid20884_TheJourneymansPiece1" style="margin-top: -12pt">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" id="exetd" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_23" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_23&#34;, T3911_23)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+         <hr class="hr">
+         <h2>练习: 熟练工人的工件 (挑战性练习)</h2>
+         <h3>目标</h3>
+         <p>成功完成此练习后，您将能够：</p>
+         <ul>
+            <li>优化杠杆的形状，在确保其强度的前提下最小化其质量。</li>
+         </ul>
+         <h3>假定背景</h3>
+         <p style="margin-top: 0pt">您的任务是优化杠杆的形状，以便在确保其强度的前提下使其质量达到最小。 </p>
+         <ul>
+            <li>您具有两个可选择的材料选项，“铝”(Aluminum) 或“钢”(Steel)。</li>
+            <li>最大包络和载荷条件如下图所示。</li>
+            <li>在孔位置安装了一个非常坚硬的螺栓来传递力。</li>
+            <li>您可以在给定的包络中自由设计零件。只有需要约束零件以及施加力的曲面/位置不能进行修改。</li>
+            <li>可以在给定的包络中最小化要约束曲面的整体尺寸。对轴孔的要求同样如此。</li>
+         </ul>
+         <p>在此示例中，已在模型中定义了载荷和约束。在应用小变形与大变形理论时，您的研究应围绕调整网格、在模型中分配材料以及检查结果展开。</p>
+         <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000169982.gif', 'Enlarge', 'width=380, height=386,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000169982.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000169982.gif', 'Enlarge', 'width=380, height=386,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a> Figure 1 - 杠杆安装空间的包络尺寸
+         </div><b>“关闭窗口”(Close Window) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002489.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>“拭除未显示的”(Erase Not Displayed) </b><img alt="Graphic" src="graphics/en_zh-cn_0000002510.png"><p><img alt="Graphic" src="graphics/en_zh-cn_0000056435.png">&nbsp;<b>Simulate_Analysis\Journeyman</b></p>
+         <p><img alt="Graphic" src="graphics/en_zh-cn_0000002503.png">JOURNEYMAN.PRT
+         </p>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 1.</b> 约束零件并应用载荷。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 打开零件模型并检查当前尺寸。</p>
+                  <p class="step_p1">2. 约束该模型并应用一个 15 kN 的载荷，角度为 13°，如图所示。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000169981.gif', 'Enlarge', 'width=351, height=400,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000169981.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000169981.gif', 'Enlarge', 'width=351, height=400,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 2.</b> 定义模型的材料。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 为该模型指定材料：钢或铝。</p>
+                  <div style="padding-left: 30px">
+                     <ul>
+                        <li>钢属性：
+                           <ul>
+                              <li>弹性模量：200000 MPa</li>
+                              <li>泊松比：0.3</li>
+                              <li>密度：7.8 g/cm<sup>3</sup></li>
+                              <li>屈服强度：400 N/mm<sup>2</sup></li>
+                           </ul>
+                        </li>
+                        <li>铝属性：
+                           <ul>
+                              <li>弹性模量：70000 MPa</li>
+                              <li>泊松比：0.3</li>
+                              <li>密度：2.8 g/cm<sup>3</sup></li>
+                              <li>屈服强度：130 N/mm<sup>2</sup></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">两种材料的失效准则均为“畸变能”(Distortion Energy) (von Mises 应力)。在此练习中不考虑安全因素。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 3.</b> 定义和运行静态分析，并检查结果。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 定义静态分析。使用单通道自适应 (SPA) 收敛算法。</p>
+                  <p class="step_p1">2. 检查结果并查看关键区域。如有必要，修改 Creo Parametric 中的模型并反复重新运行模型。当失效指标小于或等于 1 而且您对设计尺寸感到满意时，解决方案完成。</p>
+                  <div class="note">
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" style="border='0' width='95%' cellSpacing='0' cellPadding='0' align='center'" width="95%">
+                        <tbody>
+                           <tr>
+                              <td bgcolor="#ffffff" height="1" valign="top" width="35"></td>
+                              <td colspan="2" height="1" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a;">
+                              </td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td valign="top" width="32">
+                                 <div align="left"><img alt="Note" border="0" hspace="5" src="images/note.gif"></div>
+                              </td>
+                              <td valign="top">如果使用 SPA 算法运行钢制包络零件几何，具有的最大 von Mises 应力约为 70 MPa。请注意，这是约束附近的奇异应力。质量接近 20.7 kg。找到的最佳解决方案应达到质量小于 0.5 kg。</td>
+                           </tr>
+                           <tr>
+                              <td bgcolor="#ffffff" width="35"></td>
+                              <td colspan="2" valign="top">
+                                 <hr align="right" size="1" style="color: #567a9a">
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 4.</b> 建议的最佳方法。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. 通过与设计失效指标为 1 的零件时所采用的方式来完成任务。考虑哪种载荷类型 (拉伸、压缩、折弯、扭转等) 可以使其达到最佳。</p>
+                  <p class="step_p1">2. 避免考虑现实生活中杠杆的常规外观，这样在概念上您就对模型设计有了一个良好的开始。切记，错误的初始设计可能限制任何后续质量减少的成功性。</p>
+                  <p class="step_p1">3. 添加应力高的材料，并减少应力载荷不明显的材料。</p>
+                  <p class="step_p1">4. 对杠杆刚度无任何要求。</p>
+               </div>
+            </li>
+         </ol>
+         <ol class="taskPresentation" style="list-style-type: none;">
+            <li>
+               <h4><b>任务 5.</b> 示例解决方案。
+               </h4>
+               <div class="exe_st_grp1">
+                  <p class="step_p1">1. Journeyman 使用实际方法生产的零件通常类似于所示零件。它是通常用于航空和航天工业的普通铝铣削设计。</p>
+                  <p class="normal">使用的横截面为 T 轮廓和双 T 轮廓。该设计为折弯且在约束附近有较大载荷。具有顶部和底部金属带，中间有大块厚度渐增的壁，用来传递剪切载荷。请注意，T 形截面与施加的载荷方向不完全在一条直线上，这导致了材料的加载不平衡。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000169980.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000169980.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000169980.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">2. 异常的解决方案如图中的 von Mises 条纹图所示。由于纯拉伸对于完全利用材料强度很理想，所以将杠杆细分为两个不同区域 - 一个区域外观类似吊带，具有理想拉伸，另一个区域为经典直折弯、但折弯非常短的加载杠杆。请注意，理想的拉伸是最佳应力状态才能达到高材料利用率。这导致了质量的明显减少。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000169979.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000169979.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000169979.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+               <div class="exe_st_grp">
+                  <p class="step_p1">3. 该图将这一理念发挥到极致：尽管使用的是钢而不是作为典型轻量化设计材料的铝。该零件的质量还可以再减少。使用的窍门是设计的吊带不是通常的绳索吊带，而是具有两个与施加的载荷完全在一条直线上的细平行带，这样进一步减少了载荷力。</p>
+                  <div class="img"><img alt="Graphic" onClick="window.open('graphics/en_zh-cn_0000169978.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')" src="graphics/en_zh-cn_0000169978.gif" width="350"><br><br><a href="javascript:void(0)" onClick="window.open('graphics/en_zh-cn_0000169978.gif', 'Enlarge', 'width=450, height=350,toolbar=0,scrollbars=0')"><img border="0" src="images/zoom.gif"></a></div>
+               </div>
+            </li>
+         </ol>
+         <p>练习就此结束。</p>
+         <hr class="hr1">
+         <table bgcolor="" border="0" cellpadding="2" class="header" style="margin-top: -5pt; margin-bottom: -5pt" width="98%">
+            <tr>
+               <td align="left" bgcolor="" id="exetd" style="" valign="middle"><img align="absbottom" alt="返回练习" height="18" src="images/home.gif" width="18"><a href="../index.htm" target="_parent"> 返回练习</a></td>
+               <td bgcolor=""></td>
+               <td align="right" bgcolor="" id="exetd" style="" valign="middle"><img alt="标记完成并返回" height="18" id="T3911_23" src="images/check.gif" width="18"><a href="../index.htm" onClick="parent.showCheck(&#34;T3911_23&#34;, T3911_23)" target="_parent">标记完成并返回</a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>
